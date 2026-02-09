@@ -4,9 +4,9 @@ import { Menu, X, TreePine } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "Hem", path: "/" },
-  { label: "Produkt", path: "/produkt" },
-  { label: "Priser", path: "/priser" },
+  { label: "Home", path: "/" },
+  { label: "Product", path: "/produkt" },
+  { label: "Pricing", path: "/priser" },
   { label: "Team", path: "/team" },
 ];
 
@@ -41,7 +41,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               to="/"
               className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
             >
-              Boka demo
+              Get Started
             </Link>
           </nav>
 
@@ -81,7 +81,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium text-center mt-2"
                 >
-                  Boka demo
+                  Get Started
                 </Link>
               </nav>
             </motion.div>
@@ -100,12 +100,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <span className="font-serif text-lg text-foreground">Tree Studios</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Vi hjälper produktorganisationer att synliggöra kopplingen mellan strategi och faktisk effekt.
+                We help product organizations make the connection between strategy and real impact visible.
               </p>
             </div>
             <div className="flex gap-12">
               <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">Sidor</h4>
+                <h4 className="text-sm font-semibold text-foreground mb-3">Pages</h4>
                 <div className="flex flex-col gap-2">
                   {navItems.map((item) => (
                     <Link
@@ -119,16 +119,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </div>
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">Kontakt</h4>
+                <h4 className="text-sm font-semibold text-foreground mb-3">Contact</h4>
                 <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                  <span>hej@treestudios.se</span>
-                  <span>Stockholm, Sverige</span>
+                  <span>hello@treestudios.se</span>
+                  <span>Stockholm, Sweden</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-10 pt-6 border-t border-border text-center text-xs text-muted-foreground">
-            © 2026 Tree Studios. Alla rättigheter förbehållna.
+            © 2026 Tree Studios. All rights reserved.
           </div>
         </div>
       </footer>

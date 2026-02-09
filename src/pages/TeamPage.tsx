@@ -6,21 +6,21 @@ import team3 from "@/assets/team-3.jpg";
 const members = [
   {
     name: "Emma Lindström",
-    role: "VD & Grundare",
+    role: "CEO & Founder",
     img: team1,
-    bio: "Tidigare CPO med 12 års erfarenhet av produktledning. Trött på att förklara produktvärde i PowerPoint-presentationer – så hon byggde något bättre.",
+    bio: "Former CPO with 12 years of product leadership experience. Tired of explaining product value in PowerPoint decks – so she built something better.",
   },
   {
     name: "Johan Eriksson",
-    role: "CTO & Medgrundare",
+    role: "CTO & Co-founder",
     img: team2,
-    bio: "Systemarkitekt med passion för att göra komplexitet begriplig. Tror på att bra verktyg ska kännas som en förlängning av tanken.",
+    bio: "Systems architect with a passion for making complexity understandable. Believes great tools should feel like an extension of your thinking.",
   },
   {
     name: "Sara Nilsson",
     role: "Head of Design",
     img: team3,
-    bio: "Interaktionsdesigner som har jobbat med allt från startups till storbolag. Besatt av att göra det svåra enkelt och det torra vackert.",
+    bio: "Interaction designer who has worked with everything from startups to enterprises. Obsessed with making the hard things simple and the dry things beautiful.",
   },
 ];
 
@@ -31,15 +31,14 @@ const TeamPage = () => {
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center mb-16">
             <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
-              Teamet
+              The Team
             </p>
             <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-              Människorna bakom Tree Studios
+              The people behind Tree Studios
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Vi har alla levt i produktorganisationer och sett problemen
-              inifrån. Tree Studios är det verktyg vi själva önskade att vi hade
-              haft.
+              We've all lived inside product organizations and seen the problems
+              from within. Tree Studios is the tool we wished we'd had.
             </p>
           </div>
         </FadeIn>
@@ -73,22 +72,22 @@ const TeamPage = () => {
         <div className="container mx-auto px-6 py-20">
           <FadeIn>
             <h2 className="text-3xl font-serif text-foreground mb-12 text-center">
-              Vad vi tror på
+              What we believe in
             </h2>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                title: "Ödmjukhet",
-                desc: "Vi har inte alla svar. Men vi lyssnar, lär oss och bygger vidare tillsammans med er.",
+                title: "Humility",
+                desc: "We don't have all the answers. But we listen, learn, and build forward together with you.",
               },
               {
-                title: "Transparens",
-                desc: "Vi tror på öppenhet – i vårt verktyg, i våra priser och i hur vi jobbar.",
+                title: "Transparency",
+                desc: "We believe in openness – in our tool, in our pricing, and in how we work.",
               },
               {
-                title: "Effekt framför output",
-                desc: "Vi lever som vi lär. Allt vi bygger ska skapa verklig skillnad, inte bara se bra ut.",
+                title: "Impact over output",
+                desc: "We practice what we preach. Everything we build should create real difference, not just look good.",
               },
             ].map((v, i) => (
               <FadeIn key={i} delay={i * 0.1}>
