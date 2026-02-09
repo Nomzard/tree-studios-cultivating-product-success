@@ -139,6 +139,28 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust badge */}
+      <section className="border-t border-border">
+        <div className="container mx-auto px-6 py-12 md:py-16">
+          <FadeIn>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🇸🇪</span>
+                <span>Designed & built in Sweden</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🇪🇺</span>
+                <span>All infrastructure hosted in Europe</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🔒</span>
+                <span>GDPR compliant by design</span>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-primary">
         <div className="container mx-auto px-6 py-16 md:py-20 text-center">
@@ -153,7 +175,7 @@ const Index = () => {
             </p>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity active:scale-95"
             >
               Get Started
               <ArrowRight className="h-4 w-4" />
