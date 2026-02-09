@@ -2,27 +2,45 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, TreePine, MapPin, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Product", path: "/produkt" },
-  { label: "Pricing", path: "/priser" },
-  { label: "Team", path: "/team" },
-];
-
+const navItems = [{
+  label: "Home",
+  path: "/"
+}, {
+  label: "Product",
+  path: "/produkt"
+}, {
+  label: "Pricing",
+  path: "/priser"
+}, {
+  label: "Team",
+  path: "/team"
+}];
 const pageTransition = {
-  initial: { opacity: 0, y: 8 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -8 },
-  transition: { duration: 0.25, ease: "easeOut" as const },
+  initial: {
+    opacity: 0,
+    y: 8
+  },
+  animate: {
+    opacity: 1,
+    y: 0
+  },
+  exit: {
+    opacity: 0,
+    y: -8
+  },
+  transition: {
+    duration: 0.25,
+    ease: "easeOut" as const
+  }
 };
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({
+  children
+}: {
+  children: React.ReactNode;
+}) => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border safe-top">
         <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
           <Link to="/" className="flex items-center gap-2 group">
@@ -31,69 +49,40 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
+            {navItems.map(item => <Link key={item.path} to={item.path} className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === item.path ? "text-primary" : "text-muted-foreground"}`}>
                 {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/"
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity active:scale-95"
-            >
-              Get Started
-            </Link>
+              </Link>)}
+            <Link to="/" className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity active:scale-95">Login</Link>
           </nav>
 
-          <button
-            className="md:hidden text-foreground p-2 -mr-2 active:scale-90 transition-transform"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+          <button className="md:hidden text-foreground p-2 -mr-2 active:scale-90 transition-transform" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              className="md:hidden overflow-hidden border-t border-border"
-            >
+          {mobileOpen && <motion.div initial={{
+          height: 0,
+          opacity: 0
+        }} animate={{
+          height: "auto",
+          opacity: 1
+        }} exit={{
+          height: 0,
+          opacity: 0
+        }} transition={{
+          duration: 0.2,
+          ease: "easeOut"
+        }} className="md:hidden overflow-hidden border-t border-border">
               <nav className="flex flex-col p-6 gap-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={`text-base font-medium py-1 active:opacity-70 transition-opacity ${
-                      location.pathname === item.path
-                        ? "text-primary"
-                        : "text-muted-foreground"
-                    }`}
-                  >
+                {navItems.map(item => <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className={`text-base font-medium py-1 active:opacity-70 transition-opacity ${location.pathname === item.path ? "text-primary" : "text-muted-foreground"}`}>
                     {item.label}
-                  </Link>
-                ))}
-                <Link
-                  to="/"
-                  onClick={() => setMobileOpen(false)}
-                  className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center mt-2 active:scale-95 transition-transform"
-                >
+                  </Link>)}
+                <Link to="/" onClick={() => setMobileOpen(false)} className="bg-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-medium text-center mt-2 active:scale-95 transition-transform">
                   Get Started
                 </Link>
               </nav>
-            </motion.div>
-          )}
+            </motion.div>}
         </AnimatePresence>
       </header>
 
@@ -133,15 +122,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div>
                 <h4 className="text-sm font-semibold text-foreground mb-3">Pages</h4>
                 <div className="flex flex-col gap-2">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
+                  {navItems.map(item => <Link key={item.path} to={item.path} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {item.label}
-                    </Link>
-                  ))}
+                    </Link>)}
                 </div>
               </div>
               <div>
@@ -158,8 +141,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Layout;
