@@ -12,38 +12,38 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
-                För produktteam som vill göra skillnad
+                For product teams that want to make a difference
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-tight mb-6">
-                Gör kopplingen mellan{" "}
-                <span className="text-gradient-green">strategi och effekt</span>{" "}
-                synlig
+                Make the link between{" "}
+                <span className="text-gradient-green">strategy and impact</span>{" "}
+                visible
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-lg">
-                Tree Studios hjälper produktorganisationer att visuellt binda ihop
-                företagsmål, produktstrategi och teamarbete – så att alla ser hur
-                arbetet faktiskt bidrar till framgång.
+                Tree Studios helps product organizations visually connect
+                business goals, product strategy, and team work – so everyone
+                can see how their efforts actually drive success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
                 >
-                  Boka en demo
+                  Get Started
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/produkt"
                   className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-lg font-medium hover:bg-secondary transition-colors"
                 >
-                  Utforska produkten
+                  Explore the Product
                 </Link>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
               <img
                 src={heroImg}
-                alt="Illustration av ett träd som symboliserar kopplingen mellan strategi och effekt"
+                alt="Illustration of a tree symbolizing the connection between strategy and impact"
                 className="w-full rounded-2xl"
               />
             </FadeIn>
@@ -57,12 +57,12 @@ const Index = () => {
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-                Problemet vi ser
+                The problem we see
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Produktteam levererar massor av värde – men det syns sällan i
-                ledningsgruppen. Kopplingen mellan det dagliga arbetet och
-                företagets mål går förlorad.
+                Product teams deliver tons of value – but it rarely shows up in
+                the boardroom. The connection between daily work and business
+                goals gets lost.
               </p>
             </div>
           </FadeIn>
@@ -71,23 +71,23 @@ const Index = () => {
             {[
               {
                 icon: Eye,
-                title: "Osynligt värde",
-                desc: "Ledningen har svårt att se hur produktarbetet bidrar till affärsmålen.",
+                title: "Invisible value",
+                desc: "Leadership struggles to see how product work contributes to business objectives.",
               },
               {
                 icon: Target,
-                title: "Strategi utan koppling",
-                desc: "Produktteam vet sällan hur deras arbete hänger ihop med företagets riktning.",
+                title: "Strategy without connection",
+                desc: "Product teams rarely know how their work ties into the company's direction.",
               },
               {
                 icon: TreePine,
-                title: "Output istället för outcome",
-                desc: "Roadmaps visar leveranser, inte effekt. Det skapar en falsk trygghet.",
+                title: "Output over outcome",
+                desc: "Roadmaps show deliverables, not impact. That creates a false sense of security.",
               },
               {
                 icon: TrendingUp,
-                title: "Svårt att fira framsteg",
-                desc: "Utan synlig koppling blir det svårt att se och fira faktiska förflyttningar.",
+                title: "Hard to celebrate progress",
+                desc: "Without a visible connection, it's hard to see and celebrate real progress.",
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
@@ -112,18 +112,18 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
-                En levande bild av ert produktarbete
+                A living picture of your product work
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Tree Studios ger er ett dynamiskt verktyg som binder ihop{" "}
-                <strong className="text-foreground">företagsstrategi</strong>,{" "}
-                <strong className="text-foreground">produktinitiativ</strong>,{" "}
-                <strong className="text-foreground">teamarbete</strong> och{" "}
-                <strong className="text-foreground">faktisk effekt</strong> – visuellt och i realtid.
+                Tree Studios gives you a dynamic tool that connects{" "}
+                <strong className="text-foreground">business strategy</strong>,{" "}
+                <strong className="text-foreground">product initiatives</strong>,{" "}
+                <strong className="text-foreground">team work</strong>, and{" "}
+                <strong className="text-foreground">real impact</strong> – visually and in real time.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                Inte ytterligare en roadmap. Utan ett verktyg som växer och
-                förändras i takt med att ni lär er mer.
+                Not another roadmap. A tool that grows and evolves as your
+                organization learns more.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -131,7 +131,7 @@ const Index = () => {
                 to="/produkt"
                 className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
               >
-                Läs mer om produkten
+                Learn more about the product
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </FadeIn>
@@ -144,17 +144,18 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-20 text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
-              Nyfiken? Låt oss prata.
+              Curious? Let's talk.
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-lg mx-auto">
-              Vi tror på dialog före demo. Berätta vad ni brottas med, så
-              utforskar vi tillsammans om Tree Studios kan hjälpa.
+              We believe in dialogue before demos. Tell us what you're
+              struggling with, and let's explore together whether Tree Studios
+              can help.
             </p>
             <Link
               to="/"
               className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
-              Boka ett samtal
+              Get Started
               <ArrowRight className="h-4 w-4" />
             </Link>
           </FadeIn>

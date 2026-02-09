@@ -5,46 +5,46 @@ import { ArrowRight, Check } from "lucide-react";
 const tiers = [
   {
     name: "Grow",
-    price: "4 900",
-    period: "kr/mån",
-    desc: "För produktteam som vill komma igång med outcome-fokuserat arbete.",
+    price: "$49",
+    period: "/mo",
+    desc: "For product teams getting started with outcome-focused work.",
     features: [
-      "Upp till 3 produktteam",
-      "Strategiträd med 2 nivåer",
-      "Grundläggande uppföljning",
-      "E-postsupport",
-      "Onboarding-session",
+      "Up to 3 product teams",
+      "Strategy tree with 2 levels",
+      "Basic tracking & follow-up",
+      "Email support",
+      "Onboarding session",
     ],
     highlighted: false,
   },
   {
     name: "Forest",
-    price: "12 900",
-    period: "kr/mån",
-    desc: "För produktorganisationer som vill synliggöra effekt på riktigt.",
+    price: "$129",
+    period: "/mo",
+    desc: "For product organizations that want to make impact truly visible.",
     features: [
-      "Obegränsat antal team",
-      "Fullt strategiträd (alla nivåer)",
-      "Avancerad data & uppföljning",
-      "Prioriterad support",
-      "Dedikerad onboarding",
-      "Integrationer (Jira, Linear m.fl.)",
-      "Roller & behörigheter",
+      "Unlimited teams",
+      "Full strategy tree (all levels)",
+      "Advanced data & follow-up",
+      "Priority support",
+      "Dedicated onboarding",
+      "Integrations (Jira, Linear, etc.)",
+      "Roles & permissions",
     ],
     highlighted: true,
   },
   {
     name: "Enterprise",
-    price: "Kontakta oss",
+    price: "Contact us",
     period: "",
-    desc: "För stora organisationer med specifika behov kring säkerhet och skalbarhet.",
+    desc: "For large organizations with specific needs around security and scalability.",
     features: [
-      "Allt i Forest",
-      "SSO & avancerad säkerhet",
-      "Anpassade integrationer",
-      "Dedikerad kundansvarig",
-      "SLA-avtal",
-      "On-premise möjlighet",
+      "Everything in Forest",
+      "SSO & advanced security",
+      "Custom integrations",
+      "Dedicated account manager",
+      "SLA agreement",
+      "On-premise option",
     ],
     highlighted: false,
   },
@@ -57,14 +57,14 @@ const PricingPage = () => {
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center mb-16">
             <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
-              Priser
+              Pricing
             </p>
             <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-              Enkla, ärliga priser
+              Simple, honest pricing
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Inga dolda avgifter. Inga långa bindningstider. Börja där ni är
-              och väx i er egen takt.
+              No hidden fees. No long lock-in periods. Start where you are and
+              grow at your own pace.
             </p>
           </div>
         </FadeIn>
@@ -123,7 +123,7 @@ const PricingPage = () => {
                       : "bg-primary text-primary-foreground"
                   }`}
                 >
-                  {tier.price === "Kontakta oss" ? "Kontakta oss" : "Kom igång"}
+                  {tier.price === "Contact us" ? "Contact Us" : "Get Started"}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -138,17 +138,18 @@ const PricingPage = () => {
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl font-serif text-foreground mb-4">
-                Osäker? Fråga oss.
+                Not sure? Just ask.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Vi tror inte på hård säljpress. Boka ett avslappnat samtal så
-                berättar vi mer och lyssnar på era utmaningar. Inget köptvång.
+                We don't believe in hard sales pressure. Book a relaxed
+                conversation and we'll tell you more and listen to your
+                challenges. No strings attached.
               </p>
               <Link
                 to="/"
                 className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
               >
-                Boka ett samtal
+                Get in touch
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
