@@ -12,31 +12,29 @@ import {
   Sparkles,
 } from "lucide-react";
 
-/* Reusable SVG wave dividers */
+/* Single SVG wave — top half is "from" color, bottom half is "to" color */
 const WaveDivider = ({
-  fill = "hsl(var(--background))",
-  parentFill = "transparent",
-  flip = false,
-  className = "",
+  from,
+  to,
 }: {
-  fill?: string;
-  parentFill?: string;
-  flip?: boolean;
-  className?: string;
+  from: string;
+  to: string;
 }) => (
-  <div className={`w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""} ${className}`} style={{ marginTop: '-1px', marginBottom: '-1px' }}>
+  <div className="w-full overflow-hidden leading-[0] relative" style={{ marginTop: '-1px', marginBottom: '-1px' }}>
     <svg
       viewBox="0 0 1440 120"
       preserveAspectRatio="none"
-      className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
+      className="block w-full h-[60px] md:h-[80px] lg:h-[120px]"
     >
+      {/* Top area — "from" color */}
       <path
         d="M0,0 L0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,0 Z"
-        fill={parentFill}
+        fill={from}
       />
+      {/* Bottom area — "to" color */}
       <path
         d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
-        fill={fill}
+        fill={to}
       />
     </svg>
   </div>
@@ -115,13 +113,13 @@ const Index = () => {
             </FadeIn>
           </div>
         </div>
-
-        {/* Organic wave transition to next section */}
-        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--forest))" />
       </section>
 
+      {/* Wave: forest → background */}
+      <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
+
       {/* Conversation opener */}
-      <section className="relative">
+      <section className="relative bg-background">
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
         <div className="container mx-auto px-6 py-16 md:py-24">
           <FadeIn variant="blur" duration={0.8}>
@@ -145,9 +143,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Wave: background → card */}
+      <WaveDivider from="hsl(var(--background))" to="hsl(var(--card))" />
+
       {/* Problem cards */}
       <section className="relative bg-card">
-        <WaveDivider fill="hsl(var(--card))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
@@ -206,12 +206,13 @@ const Index = () => {
             ))}
           </div>
         </div>
-
-        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--card))" />
       </section>
 
+      {/* Wave: card → background */}
+      <WaveDivider from="hsl(var(--card))" to="hsl(var(--background))" />
+
       {/* Solution */}
-      <section className="relative">
+      <section className="relative bg-background">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
         <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
@@ -250,9 +251,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Wave: background → forest */}
+      <WaveDivider from="hsl(var(--background))" to="hsl(var(--forest))" />
+
       {/* Conversation values */}
       <section className="relative bg-forest">
-        <WaveDivider fill="hsl(var(--forest))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
@@ -305,12 +308,13 @@ const Index = () => {
             ))}
           </div>
         </div>
-
-        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--forest))" />
       </section>
 
+      {/* Wave: forest → background */}
+      <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
+
       {/* Trust badge */}
-      <section>
+      <section className="bg-background">
         <div className="container mx-auto px-6 py-12 md:py-16">
           <FadeIn variant="blur">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted-foreground">
@@ -331,9 +335,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Wave: background → moss */}
+      <WaveDivider from="hsl(var(--background))" to="hsl(var(--moss))" />
+
       {/* CTA */}
       <section className="relative bg-moss">
-        <WaveDivider fill="hsl(var(--moss))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="top-0 left-1/4 w-72 h-72" color="bg-leaf/10" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
