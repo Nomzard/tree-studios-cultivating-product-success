@@ -46,13 +46,14 @@
     --sidebar-ring: 152 45% 28%;
 
     /* Custom tokens — Forest Floor palette */
-    --moss: 145 30% 38%;
-    --forest: 155 50% 18%;
+    --moss: 145 25% 35%;
+    --forest: 160 25% 22%;
     --sand: 35 45% 82%;
-    --warm: 25 55% 42%;
-    --leaf: 130 35% 50%;
+    --warm: 15 55% 48%;
+    --leaf: 130 30% 48%;
     --bark: 20 30% 30%;
     --lichen: 80 20% 70%;
+    --terracotta: 15 55% 48%;
   }
 
   .dark {

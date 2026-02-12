@@ -58,6 +58,7 @@ export default {
         leaf: "hsl(var(--leaf))",
         bark: "hsl(var(--bark))",
         lichen: "hsl(var(--lichen))",
+        terracotta: "hsl(var(--terracotta))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
