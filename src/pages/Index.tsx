@@ -22,11 +22,11 @@ const WaveDivider = ({
   flip?: boolean;
   className?: string;
 }) => (
-  <div className={`w-full overflow-hidden leading-none ${flip ? "rotate-180" : ""} ${className}`}>
+  <div className={`w-full overflow-hidden leading-none -mb-px ${flip ? "rotate-180" : ""} ${className}`}>
     <svg
       viewBox="0 0 1440 120"
       preserveAspectRatio="none"
-      className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+      className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
     >
       <path
         d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
