@@ -12,16 +12,51 @@ import {
   Sparkles,
 } from "lucide-react";
 
+/* Reusable SVG wave dividers */
+const WaveDivider = ({
+  fill = "hsl(var(--background))",
+  flip = false,
+  className = "",
+}: {
+  fill?: string;
+  flip?: boolean;
+  className?: string;
+}) => (
+  <div className={`w-full overflow-hidden leading-none ${flip ? "rotate-180" : ""} ${className}`}>
+    <svg
+      viewBox="0 0 1440 120"
+      preserveAspectRatio="none"
+      className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+    >
+      <path
+        d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
+        fill={fill}
+      />
+    </svg>
+  </div>
+);
+
+const BlobShape = ({
+  className = "",
+  color = "bg-sand/10",
+}: {
+  className?: string;
+  color?: string;
+}) => (
+  <div
+    className={`absolute rounded-[40%_60%_70%_30%/40%_50%_60%_50%] ${color} blur-3xl pointer-events-none ${className}`}
+  />
+);
+
 const Index = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-forest min-h-[90vh] flex flex-col justify-center">
-        {/* Decorative organic shapes */}
-        <div className="absolute top-10 left-10 w-64 h-64 rounded-full bg-sand/10 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-72 h-72 rounded-full bg-leaf/15 blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-accent/8 blur-2xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full bg-moss/10 blur-3xl" />
+      <section className="relative bg-forest min-h-[90vh] flex flex-col justify-center">
+        <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
+        <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
+        <BlobShape className="top-1/3 right-1/4 w-48 h-48" color="bg-accent/8" />
+        <BlobShape className="bottom-1/4 left-1/4 w-56 h-56" color="bg-moss/10" />
 
         <div className="container mx-auto px-6 pt-28 pb-12 md:pt-40 md:pb-16 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -64,20 +99,25 @@ const Index = () => {
               </FadeIn>
             </div>
             <FadeIn variant="scale" delay={0.3} duration={0.9}>
-              <img
-                src={heroImg}
-                alt="Illustration of a tree symbolizing the connection between strategy and impact"
-                className="w-full rounded-2xl shadow-2xl"
-              />
+              <div className="rounded-[2rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500">
+                <img
+                  src={heroImg}
+                  alt="Illustration of a tree symbolizing the connection between strategy and impact"
+                  className="w-full"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
+
+        {/* Organic wave transition to next section */}
+        <WaveDivider fill="hsl(var(--background))" />
       </section>
 
       {/* Conversation opener */}
-      <section className="relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-leaf/5 blur-3xl -translate-y-1/2" />
-        <div className="container mx-auto px-6 py-20 md:py-28">
+      <section className="relative">
+        <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
+        <div className="container mx-auto px-6 py-16 md:py-24">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center">
               <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
@@ -100,9 +140,11 @@ const Index = () => {
       </section>
 
       {/* Problem cards */}
-      <section className="bg-card relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-sand/10 blur-3xl translate-y-1/2" />
-        <div className="container mx-auto px-6 py-20 md:py-28 relative z-10">
+      <section className="relative bg-card">
+        <WaveDivider fill="hsl(var(--card))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
+
+        <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <FadeIn variant="fadeDown">
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
@@ -143,8 +185,8 @@ const Index = () => {
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.12} variant={item.variant}>
-                <div className="bg-background rounded-2xl p-6 h-full border border-border hover:border-moss/30 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-leaf/10 flex items-center justify-center mb-4 group-hover:bg-leaf/20 transition-colors">
+                <div className="bg-background rounded-[1.5rem] p-7 h-full border border-border hover:border-moss/30 hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-[1rem] bg-leaf/10 flex items-center justify-center mb-4 group-hover:bg-leaf/20 transition-colors">
                     <item.icon className="h-6 w-6 text-moss" />
                   </div>
                   <h3 className="font-serif text-lg text-foreground mb-2">
@@ -158,12 +200,14 @@ const Index = () => {
             ))}
           </div>
         </div>
+
+        <WaveDivider fill="hsl(var(--background))" />
       </section>
 
       {/* Solution */}
-      <section className="relative overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-72 h-72 rounded-full bg-accent/5 blur-3xl" />
-        <div className="container mx-auto px-6 py-20 md:py-28">
+      <section className="relative">
+        <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
+        <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
               <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
@@ -201,10 +245,12 @@ const Index = () => {
       </section>
 
       {/* Conversation values */}
-      <section className="bg-forest relative overflow-hidden">
-        <div className="absolute top-10 right-10 w-56 h-56 rounded-full bg-leaf/10 blur-3xl" />
-        <div className="absolute bottom-10 left-20 w-40 h-40 rounded-full bg-sand/8 blur-2xl" />
-        <div className="container mx-auto px-6 py-20 md:py-28 relative z-10">
+      <section className="relative bg-forest">
+        <WaveDivider fill="hsl(var(--forest))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
+        <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
+
+        <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
@@ -239,7 +285,7 @@ const Index = () => {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.15} variant={item.variant}>
                 <div className="text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mx-auto mb-5">
+                  <div className="w-16 h-16 rounded-[1.25rem] bg-primary-foreground/10 flex items-center justify-center mx-auto mb-5 hover:scale-105 transition-transform">
                     <item.icon className="h-7 w-7 text-leaf" />
                   </div>
                   <h3 className="font-serif text-xl text-primary-foreground mb-3">
@@ -253,10 +299,12 @@ const Index = () => {
             ))}
           </div>
         </div>
+
+        <WaveDivider fill="hsl(var(--background))" />
       </section>
 
       {/* Trust badge */}
-      <section className="border-t border-border">
+      <section>
         <div className="container mx-auto px-6 py-12 md:py-16">
           <FadeIn variant="blur">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted-foreground">
@@ -278,8 +326,10 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-moss relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-leaf/10 blur-3xl" />
+      <section className="relative bg-moss">
+        <WaveDivider fill="hsl(var(--moss))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <BlobShape className="top-0 left-1/4 w-72 h-72" color="bg-leaf/10" />
+
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
           <FadeIn variant="scale" duration={0.8}>
             <MessageCircle className="h-10 w-10 text-primary-foreground/40 mx-auto mb-6" />
