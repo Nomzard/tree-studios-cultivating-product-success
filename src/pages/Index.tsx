@@ -1,4 +1,4 @@
-import heroTreeImg from "@/assets/hero-tree-illustration.png";
+import heroProductImg from "@/assets/hero-product-mockup.png";
 import FadeIn from "@/components/FadeIn";
 import { Link } from "react-router-dom";
 import { ArrowRight, TreePine, Target, Eye, TrendingUp } from "lucide-react";
@@ -49,13 +49,15 @@ const Index = () => {
         </div>
 
         {/* Hero illustration */}
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 pb-0 relative z-10">
           <FadeIn delay={0.2}>
-            <img
-              src={heroTreeImg}
-              alt="Illustration of a tree connecting strategy, teams and impact"
-              className="w-full max-w-4xl mx-auto rounded-2xl"
-            />
+            <div className="max-w-5xl mx-auto rounded-t-2xl overflow-hidden shadow-2xl border border-white/10">
+              <img
+                src={heroProductImg}
+                alt="Tree Studios product showing a tree hierarchy connecting business goals to team work"
+                className="w-full"
+              />
+            </div>
           </FadeIn>
         </div>
       </section>
