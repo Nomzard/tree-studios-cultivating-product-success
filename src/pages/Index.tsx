@@ -26,12 +26,10 @@ const WaveDivider = ({
       preserveAspectRatio="none"
       className="block w-full h-[60px] md:h-[80px] lg:h-[120px]"
     >
-      {/* Top area — "from" color */}
       <path
         d="M0,0 L0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,0 Z"
         fill={from}
       />
-      {/* Bottom area — "to" color */}
       <path
         d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
         fill={to}
@@ -66,22 +64,24 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn variant="blur" duration={0.8}>
-                <p className="text-sm font-medium text-leaf tracking-wide uppercase mb-5">
-                  Open up the conversation
+                <p className="text-sm font-medium text-terracotta tracking-wide mb-5">
+                  Let's build this together ✦
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary-foreground leading-tight mb-6">
-                  Where{" "}
-                  <span className="text-sand italic">strategy</span>{" "}
-                  meets everyday work
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6">
+                  Make the work
+                  <br />
+                  <span className="text-sand">everyone does</span>
+                  <br />
+                  visible
                 </h1>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
                 <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
-                  Tree Studios helps product organizations have better conversations 
-                  — by making the connection between business goals and team efforts 
-                  visible for everyone. Not just leadership. Everyone.
+                  Most teams do amazing work that nobody outside their circle ever sees. 
+                  We're changing that — by giving everyone a shared picture of how 
+                  daily work connects to the bigger story.
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.4}>
@@ -90,14 +90,14 @@ const Index = () => {
                     to="/"
                     className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
                   >
-                    Let's talk
+                    Join the conversation
                     <MessageCircle className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/produkt"
                     className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary-foreground/10 transition-colors"
                   >
-                    Explore the product
+                    See how it works
                   </Link>
                 </div>
               </FadeIn>
@@ -106,7 +106,7 @@ const Index = () => {
               <div className="rounded-[2rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500">
                 <img
                   src={heroImg}
-                  alt="Illustration of a tree symbolizing the connection between strategy and impact"
+                  alt="Illustration of a tree symbolizing connected work"
                   className="w-full"
                 />
               </div>
@@ -115,35 +115,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Wave: forest → background */}
       <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
 
-      {/* Conversation opener */}
+      {/* Why */}
       <section className="relative bg-background">
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
         <div className="container mx-auto px-6 py-16 md:py-24">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center">
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
-                <Sparkles className="h-4 w-4" />
-                Why we exist
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6 leading-snug">
-                Product teams do incredible work.{" "}
-                <span className="text-moss italic">But who sees it?</span>
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
+                Great work happens every day.
+                <br />
+                <span className="text-moss">But does anyone see it?</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The connection between what teams ship every day and where the company 
-                is heading often lives in someone's head — or worse, in a spreadsheet 
-                no one opens. We think that connection deserves to be alive, visual, 
-                and open for everyone to explore.
+                The link between what teams ship and where the company is heading 
+                usually lives in someone's head — or buried in a spreadsheet. 
+                We think everyone deserves to see how their work matters.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Wave: background → card */}
       <WaveDivider from="hsl(var(--background))" to="hsl(var(--card))" />
 
       {/* Problem cards */}
@@ -153,12 +147,11 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <FadeIn variant="fadeDown">
             <div className="max-w-2xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
                 Sound familiar?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                These are the conversations we hear again and again when 
-                talking to product organizations.
+                We keep hearing the same things from product teams everywhere.
               </p>
             </div>
           </FadeIn>
@@ -167,35 +160,35 @@ const Index = () => {
             {[
               {
                 icon: Eye,
-                title: "\"No one sees what we do\"",
-                desc: "Teams ship value constantly, but leadership struggles to connect it to business outcomes.",
+                title: "\"Nobody sees what we do\"",
+                desc: "You ship value constantly, but it's invisible to the rest of the org.",
                 variant: "fadeLeft" as const,
               },
               {
                 icon: Target,
-                title: "\"Strategy feels distant\"",
-                desc: "There's a company strategy somewhere, but it doesn't live in the tools teams use every day.",
+                title: "\"Strategy feels far away\"",
+                desc: "There's a strategy somewhere, but it doesn't live where your team works.",
                 variant: "fadeUp" as const,
               },
               {
                 icon: TreePine,
-                title: "\"We track output, not impact\"",
-                desc: "Roadmaps show features and dates. But what actually moved the needle? That's harder to see.",
+                title: "\"We measure output, not impact\"",
+                desc: "Roadmaps show features and dates. But what actually moved the needle?",
                 variant: "fadeUp" as const,
               },
               {
                 icon: TrendingUp,
-                title: "\"We can't celebrate wins\"",
-                desc: "Without a clear view of how work connects to goals, it's hard to know when to high-five.",
+                title: "\"We never celebrate wins\"",
+                desc: "Without seeing how work connects to goals, it's hard to know when to high-five.",
                 variant: "fadeRight" as const,
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.12} variant={item.variant}>
-                <div className="bg-background rounded-[1.5rem] p-7 h-full border border-border hover:border-moss/30 hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="w-12 h-12 rounded-[1rem] bg-leaf/10 flex items-center justify-center mb-4 group-hover:bg-leaf/20 transition-colors">
-                    <item.icon className="h-6 w-6 text-moss" />
+                <div className="bg-background rounded-[1.5rem] p-7 h-full border border-border hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-[1rem] bg-terracotta/10 flex items-center justify-center mb-4 group-hover:bg-terracotta/20 transition-colors">
+                    <item.icon className="h-6 w-6 text-terracotta" />
                   </div>
-                  <h3 className="font-serif text-lg text-foreground mb-2">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
                     {item.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -208,42 +201,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Wave: card → background */}
       <WaveDivider from="hsl(var(--card))" to="hsl(var(--background))" />
 
-      {/* Solution */}
+      {/* What we do */}
       <section className="relative bg-background">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
         <div className="container mx-auto px-6 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
-                <TreePine className="h-4 w-4" />
-                What Tree Studios does
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6 leading-snug">
-                A living picture that{" "}
-                <span className="text-moss italic">invites conversation</span>
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
+                A shared picture that
+                <br />
+                <span className="text-moss">grows with your team</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Tree Studios gives your organization a shared, visual space where{" "}
-                <strong className="text-foreground">business strategy</strong>,{" "}
-                <strong className="text-foreground">product initiatives</strong>,{" "}
-                <strong className="text-foreground">team work</strong>, and{" "}
-                <strong className="text-foreground">real impact</strong>{" "}
-                all connect — openly and in real time.
+                Tree Studios gives everyone in your organization a living, visual space 
+                where strategy, initiatives, team work, and real impact all connect — 
+                openly and in real time.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                It's not another roadmap tool. It's a conversation starter that grows 
-                as your organization learns.
+                It's not a roadmap tool. It's a place where your whole org can see 
+                the story of what you're building together.
               </p>
             </FadeIn>
             <FadeIn variant="fadeUp" delay={0.3}>
               <Link
                 to="/produkt"
-                className="inline-flex items-center gap-2 text-moss font-medium hover:text-primary transition-colors group"
+                className="inline-flex items-center gap-2 text-terracotta font-medium hover:text-warm transition-colors group"
               >
-                Explore how it works
+                See how it works
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </FadeIn>
@@ -251,10 +237,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Wave: background → forest */}
       <WaveDivider from="hsl(var(--background))" to="hsl(var(--forest))" />
 
-      {/* Conversation values */}
+      {/* Values */}
       <section className="relative bg-forest">
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
@@ -262,12 +247,12 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
-                Built for open organizations
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
+                Made for everyone, not just the few
               </h2>
               <p className="text-primary-foreground/70 text-lg leading-relaxed">
-                We believe the best product work happens when everyone 
-                can see the bigger picture — not just the people in the room.
+                The best ideas come when the whole team can see the bigger picture — 
+                not just the people in the planning room.
               </p>
             </div>
           </FadeIn>
@@ -275,29 +260,29 @@ const Index = () => {
             {[
               {
                 icon: Users,
-                title: "For the whole team",
-                desc: "Not just PMs and leadership. Engineers, designers, stakeholders — everyone gets a seat at the table.",
+                title: "Everyone gets a seat",
+                desc: "Engineers, designers, stakeholders, leadership — this is for all of you. Not just PMs.",
                 variant: "fadeLeft" as const,
               },
               {
                 icon: MessageCircle,
-                title: "Starts a conversation",
-                desc: "When work and strategy are visible side by side, better questions get asked. That's the point.",
+                title: "Better questions get asked",
+                desc: "When work and direction are side by side, conversations change. That's the whole point.",
                 variant: "fadeUp" as const,
               },
               {
                 icon: TreePine,
-                title: "Grows organically",
-                desc: "Like a real tree, your picture of strategy evolves. No need for big planning events — it lives and breathes.",
+                title: "It grows with you",
+                desc: "No big planning events needed. Your picture of strategy evolves naturally, like a living thing.",
                 variant: "fadeRight" as const,
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.15} variant={item.variant}>
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-[1.25rem] bg-primary-foreground/10 flex items-center justify-center mx-auto mb-5 hover:scale-105 transition-transform">
-                    <item.icon className="h-7 w-7 text-leaf" />
+                    <item.icon className="h-7 w-7 text-terracotta" />
                   </div>
-                  <h3 className="font-serif text-xl text-primary-foreground mb-3">
+                  <h3 className="font-heading font-semibold text-xl text-primary-foreground mb-3">
                     {item.title}
                   </h3>
                   <p className="text-sm text-primary-foreground/60 leading-relaxed">
@@ -310,10 +295,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Wave: forest → background */}
       <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
 
-      {/* Trust badge */}
+      {/* Trust */}
       <section className="bg-background">
         <div className="container mx-auto px-6 py-12 md:py-16">
           <FadeIn variant="blur">
@@ -324,18 +308,17 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg">🇪🇺</span>
-                <span>All infrastructure hosted in Europe</span>
+                <span>Hosted in Europe</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg">🔒</span>
-                <span>GDPR compliant by design</span>
+                <span>GDPR by design</span>
               </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Wave: background → moss */}
       <WaveDivider from="hsl(var(--background))" to="hsl(var(--moss))" />
 
       {/* CTA */}
@@ -345,12 +328,12 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
           <FadeIn variant="scale" duration={0.8}>
             <MessageCircle className="h-10 w-10 text-primary-foreground/40 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
-              Curious? Let's have a conversation.
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
+              Curious? Let's talk.
             </h2>
             <p className="text-primary-foreground/70 text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-              No demo pressure, no sales pitch. Just an honest chat about 
-              what you're working on and whether Tree Studios could help.
+              No sales pitch, no pressure. Just an honest conversation about 
+              what you're working on and whether we can help.
             </p>
             <Link
               to="/"
