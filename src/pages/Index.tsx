@@ -1,5 +1,6 @@
 import heroImg from "@/assets/hero-illustration.jpg";
 import FadeIn from "@/components/FadeIn";
+import DottedArrow from "@/components/DottedArrow";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -117,6 +118,17 @@ const Index = () => {
 
       <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
 
+      {/* Dotted arrow: Hero → Why */}
+      <div className="relative -mt-16 mb--8 flex justify-center z-20">
+        <DottedArrow
+          path="M10,10 C60,10 80,60 140,50 Q180,45 190,80"
+          width={200}
+          height={90}
+          className="w-32 md:w-48 opacity-70"
+          delay={0.6}
+        />
+      </div>
+
       {/* Why */}
       <section className="relative bg-background">
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
@@ -139,6 +151,19 @@ const Index = () => {
       </section>
 
       <WaveDivider from="hsl(var(--background))" to="hsl(var(--card))" />
+
+      {/* Dotted arrow: Why → Problems */}
+      <div className="relative -mt-12 mb-0 flex justify-end pr-[15%] z-20">
+        <DottedArrow
+          path="M10,10 Q50,70 100,40 T190,70"
+          width={200}
+          height={80}
+          className="w-28 md:w-40 opacity-60"
+          color="hsl(var(--moss))"
+          delay={0.4}
+          duration={1.5}
+        />
+      </div>
 
       {/* Problem cards */}
       <section className="relative bg-card">
@@ -203,6 +228,18 @@ const Index = () => {
 
       <WaveDivider from="hsl(var(--card))" to="hsl(var(--background))" />
 
+      {/* Dotted arrow: Problems → What we do */}
+      <div className="relative -mt-14 mb-0 flex justify-start pl-[20%] z-20">
+        <DottedArrow
+          path="M190,10 C140,15 120,60 60,45 Q20,38 10,75"
+          width={200}
+          height={85}
+          className="w-28 md:w-44 opacity-60"
+          delay={0.5}
+          duration={1.6}
+        />
+      </div>
+
       {/* What we do */}
       <section className="relative bg-background">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
@@ -238,6 +275,19 @@ const Index = () => {
       </section>
 
       <WaveDivider from="hsl(var(--background))" to="hsl(var(--forest))" />
+
+      {/* Dotted arrow: What we do → Values */}
+      <div className="relative -mt-14 mb-0 flex justify-center z-20">
+        <DottedArrow
+          path="M10,15 Q80,5 100,50 T190,70"
+          width={200}
+          height={80}
+          className="w-24 md:w-36 opacity-50"
+          color="hsl(var(--sand))"
+          delay={0.3}
+          duration={1.4}
+        />
+      </div>
 
       {/* Values */}
       <section className="relative bg-forest">
