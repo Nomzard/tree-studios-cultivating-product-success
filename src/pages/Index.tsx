@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-illustration.jpg";
+import heroTreeImg from "@/assets/hero-tree-illustration.png";
 import FadeIn from "@/components/FadeIn";
 import { Link } from "react-router-dom";
 import { ArrowRight, TreePine, Target, Eye, TrendingUp } from "lucide-react";
@@ -7,47 +7,56 @@ const Index = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="container mx-auto px-6 py-20 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden bg-forest">
+        {/* Decorative organic shapes */}
+        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-sand/10 blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-56 h-56 rounded-full bg-leaf/10 blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 rounded-full bg-accent/8 blur-2xl" />
+
+        <div className="container mx-auto px-6 pt-20 pb-8 md:pt-32 md:pb-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
             <FadeIn>
-              <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
+              <p className="text-sm font-medium text-leaf tracking-wide uppercase mb-5">
                 For product teams that want to make a difference
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-foreground leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary-foreground leading-tight mb-6">
                 Make the link between{" "}
-                <span className="text-gradient-green">strategy and impact</span>{" "}
+                <span className="text-sand">strategy and impact</span>{" "}
                 visible
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-2xl mx-auto">
                 Tree Studios helps product organizations visually connect
                 business goals, product strategy, and team work – so everyone
                 can see how their efforts actually drive success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center justify-center gap-2 bg-primary-foreground text-forest px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
                 >
                   Get Started
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   to="/produkt"
-                  className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-lg font-medium hover:bg-secondary transition-colors"
+                  className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-lg font-medium hover:bg-primary-foreground/10 transition-colors"
                 >
                   Explore the Product
                 </Link>
               </div>
             </FadeIn>
-            <FadeIn delay={0.2}>
-              <img
-                src={heroImg}
-                alt="Illustration of a tree symbolizing the connection between strategy and impact"
-                className="w-full rounded-2xl"
-              />
-            </FadeIn>
           </div>
+        </div>
+
+        {/* Hero illustration */}
+        <div className="container mx-auto px-6 relative z-10">
+          <FadeIn delay={0.2}>
+            <img
+              src={heroTreeImg}
+              alt="Illustration of a tree connecting strategy, teams and impact"
+              className="w-full max-w-4xl mx-auto rounded-2xl"
+            />
+          </FadeIn>
         </div>
       </section>
 
