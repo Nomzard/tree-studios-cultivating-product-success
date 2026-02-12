@@ -141,7 +141,7 @@ const Index = () => {
 
       {/* Problem cards */}
       <section className="relative bg-card">
-        <WaveDivider fill="hsl(var(--card))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <WaveDivider fill="hsl(var(--card))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
         <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
@@ -246,7 +246,7 @@ const Index = () => {
 
       {/* Conversation values */}
       <section className="relative bg-forest">
-        <WaveDivider fill="hsl(var(--forest))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <WaveDivider fill="hsl(var(--forest))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
@@ -327,7 +327,7 @@ const Index = () => {
 
       {/* CTA */}
       <section className="relative bg-moss">
-        <WaveDivider fill="hsl(var(--moss))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
+        <WaveDivider fill="hsl(var(--moss))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
         <BlobShape className="top-0 left-1/4 w-72 h-72" color="bg-leaf/10" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
