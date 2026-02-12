@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Menu, X, TreePine, MapPin, Shield } from "lucide-react";
+import { Menu, X, MapPin, Shield } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -43,18 +44,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       >
         <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
           <Link to="/" className="flex items-center gap-2 group">
-            <TreePine
-              className={`h-7 w-7 transition-all group-hover:scale-110 ${
-                isTransparent ? "text-leaf" : "text-primary"
+            <img
+              src={treeStudiosLogo}
+              alt="Tree Studios"
+              className={`h-8 md:h-9 w-auto transition-all group-hover:scale-105 ${
+                isTransparent ? "brightness-0 invert" : ""
               }`}
             />
-            <span
-              className={`font-serif text-xl transition-colors ${
-                isTransparent ? "text-primary-foreground" : "text-foreground"
-              }`}
-            >
-              Tree Studios
-            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -163,10 +159,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex flex-col md:flex-row justify-between gap-8">
             <div className="max-w-xs">
               <div className="flex items-center gap-2 mb-3">
-                <TreePine className="h-6 w-6 text-primary" />
-                <span className="font-serif text-lg text-foreground">
-                  Tree Studios
-                </span>
+                <img src={treeStudiosLogo} alt="Tree Studios" className="h-7 w-auto" />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 We help product organizations make the connection between
