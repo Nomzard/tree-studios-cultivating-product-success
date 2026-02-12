@@ -88,7 +88,7 @@ const Index = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/"
-                    className="inline-flex items-center justify-center gap-2 bg-sand text-forest px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
                   >
                     Let's talk
                     <MessageCircle className="h-4 w-4" />
@@ -354,7 +354,7 @@ const Index = () => {
             </p>
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-sand text-forest px-8 py-4 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 text-lg"
+              className="inline-flex items-center gap-2 bg-terracotta text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 text-lg"
             >
               Start a conversation
               <MessageCircle className="h-5 w-5" />
