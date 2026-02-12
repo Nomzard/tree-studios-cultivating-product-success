@@ -24,7 +24,7 @@
     --muted: 40 20% 92%;
     --muted-foreground: 150 10% 45%;
 
-    --accent: 38 60% 55%;
+    --accent: 32 50% 48%;
     --accent-foreground: 150 20% 15%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,12 +45,14 @@
     --sidebar-border: 145 15% 85%;
     --sidebar-ring: 152 45% 28%;
 
-    /* Custom tokens */
+    /* Custom tokens — Forest Floor palette */
     --moss: 145 30% 38%;
     --forest: 155 50% 18%;
-    --sand: 38 40% 85%;
-    --warm: 30 50% 50%;
+    --sand: 35 45% 82%;
+    --warm: 25 55% 42%;
     --leaf: 130 35% 50%;
+    --bark: 20 30% 30%;
+    --lichen: 80 20% 70%;
   }
 
   .dark {
