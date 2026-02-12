@@ -56,6 +56,8 @@ export default {
         sand: "hsl(var(--sand))",
         warm: "hsl(var(--warm))",
         leaf: "hsl(var(--leaf))",
+        bark: "hsl(var(--bark))",
+        lichen: "hsl(var(--lichen))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
