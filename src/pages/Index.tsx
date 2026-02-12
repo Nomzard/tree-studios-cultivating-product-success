@@ -15,19 +15,25 @@ import {
 /* Reusable SVG wave dividers */
 const WaveDivider = ({
   fill = "hsl(var(--background))",
+  parentFill = "transparent",
   flip = false,
   className = "",
 }: {
   fill?: string;
+  parentFill?: string;
   flip?: boolean;
   className?: string;
 }) => (
-  <div className={`w-full overflow-hidden leading-none -mb-px ${flip ? "rotate-180" : ""} ${className}`}>
+  <div className={`w-full overflow-hidden leading-[0] ${flip ? "rotate-180" : ""} ${className}`} style={{ marginTop: '-1px', marginBottom: '-1px' }}>
     <svg
       viewBox="0 0 1440 120"
       preserveAspectRatio="none"
       className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
     >
+      <path
+        d="M0,0 L0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,0 Z"
+        fill={parentFill}
+      />
       <path
         d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
         fill={fill}
@@ -111,7 +117,7 @@ const Index = () => {
         </div>
 
         {/* Organic wave transition to next section */}
-        <WaveDivider fill="hsl(var(--background))" />
+        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--forest))" />
       </section>
 
       {/* Conversation opener */}
@@ -141,7 +147,7 @@ const Index = () => {
 
       {/* Problem cards */}
       <section className="relative bg-card">
-        <WaveDivider fill="hsl(var(--card))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
+        <WaveDivider fill="hsl(var(--card))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
@@ -201,7 +207,7 @@ const Index = () => {
           </div>
         </div>
 
-        <WaveDivider fill="hsl(var(--background))" />
+        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--card))" />
       </section>
 
       {/* Solution */}
@@ -246,7 +252,7 @@ const Index = () => {
 
       {/* Conversation values */}
       <section className="relative bg-forest">
-        <WaveDivider fill="hsl(var(--forest))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
+        <WaveDivider fill="hsl(var(--forest))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
@@ -300,7 +306,7 @@ const Index = () => {
           </div>
         </div>
 
-        <WaveDivider fill="hsl(var(--background))" />
+        <WaveDivider fill="hsl(var(--background))" parentFill="hsl(var(--forest))" />
       </section>
 
       {/* Trust badge */}
@@ -327,7 +333,7 @@ const Index = () => {
 
       {/* CTA */}
       <section className="relative bg-moss">
-        <WaveDivider fill="hsl(var(--moss))" flip className="absolute top-0 left-0 -translate-y-[99%] -mb-px" />
+        <WaveDivider fill="hsl(var(--moss))" parentFill="hsl(var(--background))" flip className="absolute top-0 left-0 -translate-y-[99%]" />
         <BlobShape className="top-0 left-1/4 w-72 h-72" color="bg-leaf/10" />
 
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
