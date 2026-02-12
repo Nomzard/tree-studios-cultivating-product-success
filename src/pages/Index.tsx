@@ -25,37 +25,45 @@ const Index = () => {
 
         <div className="container mx-auto px-6 pt-28 pb-12 md:pt-40 md:pb-16 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <FadeIn>
-              <p className="text-sm font-medium text-leaf tracking-wide uppercase mb-5">
-                Open up the conversation
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary-foreground leading-tight mb-6">
-                Where{" "}
-                <span className="text-sand italic">strategy</span>{" "}
-                meets everyday work
-              </h1>
-              <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
-                Tree Studios helps product organizations have better conversations 
-                — by making the connection between business goals and team efforts 
-                visible for everyone. Not just leadership. Everyone.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/"
-                  className="inline-flex items-center justify-center gap-2 bg-sand text-forest px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
-                >
-                  Let's talk
-                  <MessageCircle className="h-4 w-4" />
-                </Link>
-                <Link
-                  to="/produkt"
-                  className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary-foreground/10 transition-colors"
-                >
-                  Explore the product
-                </Link>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.2}>
+            <div>
+              <FadeIn variant="blur" duration={0.8}>
+                <p className="text-sm font-medium text-leaf tracking-wide uppercase mb-5">
+                  Open up the conversation
+                </p>
+              </FadeIn>
+              <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-primary-foreground leading-tight mb-6">
+                  Where{" "}
+                  <span className="text-sand italic">strategy</span>{" "}
+                  meets everyday work
+                </h1>
+              </FadeIn>
+              <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
+                <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
+                  Tree Studios helps product organizations have better conversations 
+                  — by making the connection between business goals and team efforts 
+                  visible for everyone. Not just leadership. Everyone.
+                </p>
+              </FadeIn>
+              <FadeIn variant="fadeUp" delay={0.4}>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    to="/"
+                    className="inline-flex items-center justify-center gap-2 bg-sand text-forest px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
+                  >
+                    Let's talk
+                    <MessageCircle className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/produkt"
+                    className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary-foreground/10 transition-colors"
+                  >
+                    Explore the product
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
+            <FadeIn variant="scale" delay={0.3} duration={0.9}>
               <img
                 src={heroImg}
                 alt="Illustration of a tree symbolizing the connection between strategy and impact"
@@ -70,7 +78,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-leaf/5 blur-3xl -translate-y-1/2" />
         <div className="container mx-auto px-6 py-20 md:py-28">
-          <FadeIn>
+          <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center">
               <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
                 <Sparkles className="h-4 w-4" />
@@ -95,7 +103,7 @@ const Index = () => {
       <section className="bg-card relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-sand/10 blur-3xl translate-y-1/2" />
         <div className="container mx-auto px-6 py-20 md:py-28 relative z-10">
-          <FadeIn>
+          <FadeIn variant="fadeDown">
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
                 Sound familiar?
@@ -113,24 +121,28 @@ const Index = () => {
                 icon: Eye,
                 title: "\"No one sees what we do\"",
                 desc: "Teams ship value constantly, but leadership struggles to connect it to business outcomes.",
+                variant: "fadeLeft" as const,
               },
               {
                 icon: Target,
                 title: "\"Strategy feels distant\"",
                 desc: "There's a company strategy somewhere, but it doesn't live in the tools teams use every day.",
+                variant: "fadeUp" as const,
               },
               {
                 icon: TreePine,
                 title: "\"We track output, not impact\"",
                 desc: "Roadmaps show features and dates. But what actually moved the needle? That's harder to see.",
+                variant: "fadeUp" as const,
               },
               {
                 icon: TrendingUp,
                 title: "\"We can't celebrate wins\"",
                 desc: "Without a clear view of how work connects to goals, it's hard to know when to high-five.",
+                variant: "fadeRight" as const,
               },
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
+              <FadeIn key={i} delay={i * 0.12} variant={item.variant}>
                 <div className="bg-background rounded-2xl p-6 h-full border border-border hover:border-moss/30 transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-leaf/10 flex items-center justify-center mb-4 group-hover:bg-leaf/20 transition-colors">
                     <item.icon className="h-6 w-6 text-moss" />
@@ -153,7 +165,7 @@ const Index = () => {
         <div className="absolute top-1/2 right-0 w-72 h-72 rounded-full bg-accent/5 blur-3xl" />
         <div className="container mx-auto px-6 py-20 md:py-28">
           <div className="max-w-3xl mx-auto text-center">
-            <FadeIn>
+            <FadeIn variant="scale" duration={0.7}>
               <span className="inline-flex items-center gap-2 text-sm font-medium text-moss tracking-wide uppercase mb-5">
                 <TreePine className="h-4 w-4" />
                 What Tree Studios does
@@ -175,7 +187,7 @@ const Index = () => {
                 as your organization learns.
               </p>
             </FadeIn>
-            <FadeIn delay={0.2}>
+            <FadeIn variant="fadeUp" delay={0.3}>
               <Link
                 to="/produkt"
                 className="inline-flex items-center gap-2 text-moss font-medium hover:text-primary transition-colors group"
@@ -193,7 +205,7 @@ const Index = () => {
         <div className="absolute top-10 right-10 w-56 h-56 rounded-full bg-leaf/10 blur-3xl" />
         <div className="absolute bottom-10 left-20 w-40 h-40 rounded-full bg-sand/8 blur-2xl" />
         <div className="container mx-auto px-6 py-20 md:py-28 relative z-10">
-          <FadeIn>
+          <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
                 Built for open organizations
@@ -210,19 +222,22 @@ const Index = () => {
                 icon: Users,
                 title: "For the whole team",
                 desc: "Not just PMs and leadership. Engineers, designers, stakeholders — everyone gets a seat at the table.",
+                variant: "fadeLeft" as const,
               },
               {
                 icon: MessageCircle,
                 title: "Starts a conversation",
                 desc: "When work and strategy are visible side by side, better questions get asked. That's the point.",
+                variant: "fadeUp" as const,
               },
               {
                 icon: TreePine,
                 title: "Grows organically",
                 desc: "Like a real tree, your picture of strategy evolves. No need for big planning events — it lives and breathes.",
+                variant: "fadeRight" as const,
               },
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.15}>
+              <FadeIn key={i} delay={i * 0.15} variant={item.variant}>
                 <div className="text-center">
                   <div className="w-14 h-14 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mx-auto mb-5">
                     <item.icon className="h-7 w-7 text-leaf" />
@@ -243,7 +258,7 @@ const Index = () => {
       {/* Trust badge */}
       <section className="border-t border-border">
         <div className="container mx-auto px-6 py-12 md:py-16">
-          <FadeIn>
+          <FadeIn variant="blur">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <span className="text-lg">🇸🇪</span>
@@ -266,7 +281,7 @@ const Index = () => {
       <section className="bg-moss relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-leaf/10 blur-3xl" />
         <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
-          <FadeIn>
+          <FadeIn variant="scale" duration={0.8}>
             <MessageCircle className="h-10 w-10 text-primary-foreground/40 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-4">
               Curious? Let's have a conversation.
