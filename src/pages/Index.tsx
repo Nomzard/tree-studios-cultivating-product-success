@@ -409,32 +409,6 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--background))" to="hsl(var(--moss))" />
-
-      {/* CTA */}
-      <section className="relative bg-moss">
-        <BlobShape className="top-0 left-1/4 w-72 h-72" color="bg-leaf/10" />
-
-        <div className="container mx-auto px-6 py-16 md:py-24 text-center relative z-10">
-          <FadeIn variant="scale" duration={0.8}>
-            <MessageCircle className="h-10 w-10 text-primary-foreground/40 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
-              Curious? Let's talk.
-            </h2>
-            <p className="text-primary-foreground/70 text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-              No sales pitch, no pressure. Just an honest conversation about 
-              what you're working on and whether we can help.
-            </p>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 bg-terracotta text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 text-lg"
-            >
-              Start a conversation
-              <MessageCircle className="h-5 w-5" />
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
     </div>
   );
 };
