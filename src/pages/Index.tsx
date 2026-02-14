@@ -181,7 +181,42 @@ const Index = () => {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Dotted arrows between cards — visible on lg only */}
+            <div className="hidden lg:block absolute top-1/2 left-[25%] -translate-x-1/2 -translate-y-1/2 z-10">
+              <DottedArrow
+                path="M5,20 Q30,5 55,25"
+                width={60}
+                height={35}
+                className="w-14 opacity-50"
+                color="hsl(var(--terracotta))"
+                delay={0.6}
+                duration={1.0}
+              />
+            </div>
+            <div className="hidden lg:block absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 z-10">
+              <DottedArrow
+                path="M5,15 Q30,30 55,12"
+                width={60}
+                height={35}
+                className="w-14 opacity-50"
+                color="hsl(var(--moss))"
+                delay={0.8}
+                duration={1.0}
+              />
+            </div>
+            <div className="hidden lg:block absolute top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 z-10">
+              <DottedArrow
+                path="M5,22 Q30,8 55,20"
+                width={60}
+                height={35}
+                className="w-14 opacity-50"
+                color="hsl(var(--sand))"
+                delay={1.0}
+                duration={1.0}
+              />
+            </div>
+
             {[
               {
                 icon: Eye,
