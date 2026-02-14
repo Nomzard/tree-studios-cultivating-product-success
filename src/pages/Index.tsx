@@ -11,6 +11,12 @@ import {
   MessageCircle,
   Users,
   Sparkles,
+  Link2,
+  AlertTriangle,
+  Layers,
+  Zap,
+  Share2,
+  Search,
 } from "lucide-react";
 
 /* Single SVG wave — top half is "from" color, bottom half is "to" color */
@@ -66,23 +72,23 @@ const Index = () => {
             <div>
               <FadeIn variant="blur" duration={0.8}>
                 <p className="text-sm font-medium text-terracotta tracking-wide mb-5">
-                  Let's build this together ✦
+                  For product teams who want clarity ✦
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6">
-                  Make the work
+                  See how your
                   <br />
-                  <span className="text-sand">everyone does</span>
+                  <span className="text-sand">roadmap connects</span>
                   <br />
-                  visible
+                  to strategy
                 </h1>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
                 <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
-                  Most teams do amazing work that nobody outside their circle ever sees. 
-                  We're changing that — by giving everyone a shared picture of how 
-                  daily work connects to the bigger story.
+                  When stakeholders ask "why are we working on this?" — you shouldn't 
+                  have to dig through slides. Tree Studios makes the link between 
+                  your roadmap and product strategy visual, shareable, and always up to date.
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.4}>
@@ -136,14 +142,14 @@ const Index = () => {
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
-                Great work happens every day.
+                "Why are we prioritizing this?"
                 <br />
-                <span className="text-moss">But does anyone see it?</span>
+                <span className="text-moss">Sound familiar?</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The link between what teams ship and where the company is heading 
-                usually lives in someone's head — or buried in a spreadsheet. 
-                We think everyone deserves to see how their work matters.
+                The connection between what teams ship and the product strategy 
+                usually lives in someone's head — or buried in a deck from last quarter. 
+                When everyone interprets the strategy differently, alignment dies quietly.
               </p>
             </div>
           </FadeIn>
@@ -171,12 +177,12 @@ const Index = () => {
 
         <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
           <FadeIn variant="fadeDown">
-            <div className="max-w-2xl mx-auto text-center mb-16">
+             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
-                Sound familiar?
+                The pain is real
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We keep hearing the same things from product teams everywhere.
+                We keep hearing the same things from product orgs everywhere.
               </p>
             </div>
           </FadeIn>
@@ -219,27 +225,27 @@ const Index = () => {
 
             {[
               {
-                icon: Eye,
-                title: "\"Nobody sees what we do\"",
-                desc: "You ship value constantly, but it's invisible to the rest of the org.",
+                icon: Link2,
+                title: "\"How does this map to strategy?\"",
+                desc: "PMs can't easily show how their work connects to product strategy — so everyone guesses and creates their own interpretation.",
                 variant: "fadeLeft" as const,
               },
               {
-                icon: Target,
-                title: "\"Strategy feels far away\"",
-                desc: "There's a strategy somewhere, but it doesn't live where your team works.",
+                icon: AlertTriangle,
+                title: "\"We read the strategy differently\"",
+                desc: "Teams and leadership interpret the strategy in different ways — leading to friction, rework, and unclear decisions.",
                 variant: "fadeUp" as const,
               },
               {
-                icon: TreePine,
-                title: "\"We measure output, not impact\"",
-                desc: "Roadmaps show features and dates. But what actually moved the needle?",
+                icon: Layers,
+                title: "\"Alignment dies after planning\"",
+                desc: "After the planning workshop, teams fall back into their own lanes. The shared picture fades within weeks.",
                 variant: "fadeUp" as const,
               },
               {
-                icon: TrendingUp,
-                title: "\"We never celebrate wins\"",
-                desc: "Without seeing how work connects to goals, it's hard to know when to high-five.",
+                icon: AlertTriangle,
+                title: "\"Not another tool to maintain\"",
+                desc: "If it becomes yet another place to update, adoption drops. It needs to fit into how you already work.",
                 variant: "fadeRight" as const,
               },
             ].map((item, i) => (
@@ -282,18 +288,18 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
-                A shared picture that
+                The alignment layer
                 <br />
-                <span className="text-moss">grows with your team</span>
+                <span className="text-moss">between strategy and delivery</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Tree Studios gives everyone in your organization a living, visual space 
-                where strategy, initiatives, team work, and real impact all connect — 
-                openly and in real time.
+                Tree Studios connects your product strategy to what teams actually work on 
+                in Jira and Linear — making gaps and connections visually obvious for 
+                the whole organization. Not another execution tool. An alignment layer.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                It's not a roadmap tool. It's a place where your whole org can see 
-                the story of what you're building together.
+                Share a single link instead of slides. It's always up to date, 
+                always showing the real picture — even when the strategy is messy.
               </p>
             </FadeIn>
             <FadeIn variant="fadeUp" delay={0.3}>
@@ -333,32 +339,31 @@ const Index = () => {
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
-                Made for everyone, not just the few
+                What changes in the first week
               </h2>
               <p className="text-primary-foreground/70 text-lg leading-relaxed">
-                The best ideas come when the whole team can see the bigger picture — 
-                not just the people in the planning room.
+                Real gains, not just promises. Here's what teams tell us.
               </p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                icon: Users,
-                title: "Everyone gets a seat",
-                desc: "Engineers, designers, stakeholders, leadership — this is for all of you. Not just PMs.",
+                icon: Zap,
+                title: "Faster alignment",
+                desc: "Go from weeks of planning sync to continuous alignment. Connect an initiative to an objective in seconds — and stop guessing.",
                 variant: "fadeLeft" as const,
               },
               {
-                icon: MessageCircle,
-                title: "Better questions get asked",
-                desc: "When work and direction are side by side, conversations change. That's the whole point.",
+                icon: Search,
+                title: "See the gaps, not just the plan",
+                desc: "Orphan detection flags initiatives without a clear strategy link. You'll see what's missing — not pretend everything is 100% aligned.",
                 variant: "fadeUp" as const,
               },
               {
-                icon: TreePine,
-                title: "It grows with you",
-                desc: "No big planning events needed. Your picture of strategy evolves naturally, like a living thing.",
+                icon: Share2,
+                title: "One link replaces the deck",
+                desc: "Share a living Tree view with stakeholders. They'll instantly see what's happening and why — without scheduling a meeting.",
                 variant: "fadeRight" as const,
               },
             ].map((item, i) => (
