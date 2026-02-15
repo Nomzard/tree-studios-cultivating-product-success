@@ -383,28 +383,6 @@ const Index = () => {
 
       <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
 
-      {/* Trust */}
-      <section className="bg-background">
-        <div className="container mx-auto px-6 py-12 md:py-16">
-          <FadeIn variant="blur">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">🇸🇪</span>
-                <span>Designed & built in Sweden</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-lg">🇪🇺</span>
-                <span>Hosted in Europe</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-lg">🔒</span>
-                <span>GDPR by design</span>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
     </div>
   );
 };
