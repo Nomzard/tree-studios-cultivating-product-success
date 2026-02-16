@@ -54,11 +54,13 @@ const TeamPage = () => {
           {members.map((m, i) => (
             <FadeIn key={i} delay={i * 0.15}>
               <div className="text-center">
-                <img
-                  src={m.img}
-                  alt={m.name}
-                  className="w-40 h-40 rounded-full object-cover mx-auto mb-5 border-4 border-secondary"
-                />
+                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-5 border-4 border-secondary">
+                  <img
+                    src={m.img}
+                    alt={m.name}
+                    className="w-full h-full object-cover scale-150 translate-y-2"
+                  />
+                </div>
                 <h3 className="font-serif text-xl text-foreground mb-1">
                   {m.name}
                 </h3>
