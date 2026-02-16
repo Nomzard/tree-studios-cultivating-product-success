@@ -1,26 +1,33 @@
 import FadeIn from "@/components/FadeIn";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import teamWontstop from "@/assets/team-wontstop.svg";
+import teamChilly from "@/assets/team-chilly.svg";
+import teamBueno from "@/assets/team-bueno.svg";
+import teamWaiting from "@/assets/team-waiting.svg";
 
 const members = [
   {
-    name: "Emma Lindström",
+    name: "Won't Stop",
     role: "CEO & Founder",
-    img: team1,
+    img: teamWontstop,
     bio: "Former CPO with 12 years of product leadership experience. Tired of explaining product value in PowerPoint decks – so she built something better.",
   },
   {
-    name: "Johan Eriksson",
+    name: "Chilly",
     role: "CTO & Co-founder",
-    img: team2,
+    img: teamChilly,
     bio: "Systems architect with a passion for making complexity understandable. Believes great tools should feel like an extension of your thinking.",
   },
   {
-    name: "Sara Nilsson",
+    name: "Bueno",
     role: "Head of Design",
-    img: team3,
+    img: teamBueno,
     bio: "Interaction designer who has worked with everything from startups to enterprises. Obsessed with making the hard things simple and the dry things beautiful.",
+  },
+  {
+    name: "Waiting",
+    role: "Head of Product",
+    img: teamWaiting,
+    bio: "Product strategist who believes the best features are the ones you don't have to explain. Passionate about user-centered design and data-driven decisions.",
   },
 ];
 
@@ -43,7 +50,7 @@ const TeamPage = () => {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {members.map((m, i) => (
             <FadeIn key={i} delay={i * 0.15}>
               <div className="text-center">
