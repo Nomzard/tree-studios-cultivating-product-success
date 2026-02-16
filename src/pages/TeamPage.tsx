@@ -10,24 +10,28 @@ const members = [
     role: "CEO & Founder",
     img: teamWontstop,
     bio: "Former CPO with 12 years of product leadership experience. Tired of explaining product value in PowerPoint decks – so she built something better.",
+    imgClass: "scale-[2.8] translate-y-[35%]",
   },
   {
     name: "Chilly",
     role: "CTO & Co-founder",
     img: teamChilly,
     bio: "Systems architect with a passion for making complexity understandable. Believes great tools should feel like an extension of your thinking.",
+    imgClass: "scale-[2.8] translate-y-[30%]",
   },
   {
     name: "Bueno",
     role: "Head of Design",
     img: teamBueno,
     bio: "Interaction designer who has worked with everything from startups to enterprises. Obsessed with making the hard things simple and the dry things beautiful.",
+    imgClass: "scale-[2.8] translate-y-[30%]",
   },
   {
     name: "Waiting",
     role: "Head of Product",
     img: teamWaiting,
     bio: "Product strategist who believes the best features are the ones you don't have to explain. Passionate about user-centered design and data-driven decisions.",
+    imgClass: "scale-[2.8] translate-y-[28%]",
   },
 ];
 
@@ -58,7 +62,7 @@ const TeamPage = () => {
                   <img
                     src={m.img}
                     alt={m.name}
-                    className="w-full h-full object-cover scale-150 translate-y-2"
+                    className={`w-full h-full object-cover ${m.imgClass}`}
                   />
                 </div>
                 <h3 className="font-serif text-xl text-foreground mb-1">
