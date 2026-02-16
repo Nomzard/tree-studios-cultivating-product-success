@@ -4,20 +4,6 @@ import { ArrowRight, Check } from "lucide-react";
 
 const tiers = [
   {
-    name: "Grow",
-    price: "$49",
-    period: "/mo",
-    desc: "For product teams getting started with outcome-focused work.",
-    features: [
-      "Up to 3 product teams",
-      "Strategy tree with 2 levels",
-      "Basic tracking & follow-up",
-      "Email support",
-      "Onboarding session",
-    ],
-    highlighted: false,
-  },
-  {
     name: "Forest",
     price: "$129",
     period: "/mo",
@@ -69,7 +55,7 @@ const PricingPage = () => {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {tiers.map((tier, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div
