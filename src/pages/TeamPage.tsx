@@ -10,28 +10,32 @@ const members = [
     role: "CEO & Founder",
     img: teamWontstop,
     bio: "Former CPO with 12 years of product leadership experience. Tired of explaining product value in PowerPoint decks – so she built something better.",
-    imgClass: "scale-[2.8] translate-y-[35%]",
+    bgSize: "300%",
+    bgPos: "52% 8%",
   },
   {
     name: "Chilly",
     role: "CTO & Co-founder",
     img: teamChilly,
     bio: "Systems architect with a passion for making complexity understandable. Believes great tools should feel like an extension of your thinking.",
-    imgClass: "scale-[2.8] translate-y-[30%]",
+    bgSize: "300%",
+    bgPos: "50% 5%",
   },
   {
     name: "Bueno",
     role: "Head of Design",
     img: teamBueno,
     bio: "Interaction designer who has worked with everything from startups to enterprises. Obsessed with making the hard things simple and the dry things beautiful.",
-    imgClass: "scale-[2.8] translate-y-[30%]",
+    bgSize: "280%",
+    bgPos: "55% 8%",
   },
   {
     name: "Waiting",
     role: "Head of Product",
     img: teamWaiting,
     bio: "Product strategist who believes the best features are the ones you don't have to explain. Passionate about user-centered design and data-driven decisions.",
-    imgClass: "scale-[2.8] translate-y-[28%]",
+    bgSize: "280%",
+    bgPos: "48% 12%",
   },
 ];
 
@@ -58,13 +62,17 @@ const TeamPage = () => {
           {members.map((m, i) => (
             <FadeIn key={i} delay={i * 0.15}>
               <div className="text-center">
-                <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-5 border-4 border-secondary">
-                  <img
-                    src={m.img}
-                    alt={m.name}
-                    className={`w-full h-full object-cover ${m.imgClass}`}
-                  />
-                </div>
+                <div
+                  className="w-40 h-40 rounded-full mx-auto mb-5 border-4 border-secondary"
+                  style={{
+                    backgroundImage: `url(${m.img})`,
+                    backgroundSize: m.bgSize || '280%',
+                    backgroundPosition: m.bgPos || 'center 15%',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                  role="img"
+                  aria-label={m.name}
+                />
                 <h3 className="font-serif text-xl text-foreground mb-1">
                   {m.name}
                 </h3>
