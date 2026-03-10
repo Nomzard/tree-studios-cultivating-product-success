@@ -38,15 +38,14 @@ const PricingPage = () => {
                 Not sure? Just ask.
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                We don't believe in hard sales pressure. Book a relaxed
-                conversation and we'll tell you more and listen to your
-                challenges. No strings attached.
+                Start for free and explore the product at your own pace. No
+                credit card required.
               </p>
               <Link
-                to="/demo"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                to="/signup"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
               >
-                Get in touch
+                Sign Up Free
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

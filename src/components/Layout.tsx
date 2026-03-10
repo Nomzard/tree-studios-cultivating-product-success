@@ -135,11 +135,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </Link>
                 ))}
                 <Link
-                  to="/demo"
+                  to="/signup"
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium text-center mt-2 active:scale-95 transition-transform"
                 >
-                  Book a Demo
+                  Sign Up Free
                 </Link>
               </nav>
             </motion.div>

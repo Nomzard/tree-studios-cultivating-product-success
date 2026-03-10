@@ -143,16 +143,16 @@ const GuidesPage = () => {
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-2xl font-heading font-semibold text-foreground mb-4">
-                Want to see strategy alignment in action?
+                Ready to try strategy alignment?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Book a demo and we'll show you how Tree Studios makes it work.
+                Sign up free and start building your strategy tree today.
               </p>
               <Link
-                to="/demo"
+                to="/signup"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
               >
-                Book a demo
+                Sign Up Free
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

@@ -35,7 +35,8 @@ const App = () => (
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/guides" element={<GuidesPage />} />
               <Route path="/guides/:slug" element={<GuidePage />} />
-              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/demo" element={<Navigate to="/signup" replace />} />
               <Route path="/integrations" element={<IntegrationsPage />} />
               <Route path="/integrations/:slug" element={<IntegrationPage />} />
               {/* Redirects from old Swedish URLs */}

@@ -142,14 +142,13 @@ const FAQPage = () => {
                 Still have questions?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Book a relaxed conversation and we'll tell you more. No strings
-                attached.
+                Try Tree Studios for free — no credit card required.
               </p>
               <Link
-                to="/demo"
+                to="/signup"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
               >
-                Book a demo
+                Sign Up Free
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
