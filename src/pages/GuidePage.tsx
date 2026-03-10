@@ -219,17 +219,16 @@ const GuidePage = () => {
             <div className="mt-16 pt-8 border-t border-border">
               <div className="bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground text-center">
                 <h3 className="text-2xl font-heading font-semibold mb-3">
-                  Ready to try strategy alignment?
+                  Ready to try it yourself?
                 </h3>
                 <p className="text-primary-foreground/80 mb-6 max-w-md mx-auto">
-                  See how Tree Studios makes the connection between strategy and
-                  impact visible.
+                  Sign up free and start connecting strategy to impact today.
                 </p>
                 <Link
-                  to="/demo"
+                  to="/signup"
                   className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
                 >
-                  Book a demo
+                  Sign Up Free
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

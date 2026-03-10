@@ -160,16 +160,16 @@ const ProductPage = () => {
         <div className="container mx-auto px-6 py-16 text-center">
           <FadeIn>
             <h2 className="text-3xl font-serif text-primary-foreground mb-4">
-              Want to see Tree Studios in action?
+              Ready to try Tree Studios?
             </h2>
             <p className="text-primary-foreground/80 mb-8 max-w-md mx-auto">
-              We'd love to show you how it can look for your organization.
+              Sign up for free and start building your strategy tree today.
             </p>
             <Link
-              to="/demo"
+              to="/signup"
               className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
-              Get Started
+              Sign Up Free
               <ArrowRight className="h-4 w-4" />
             </Link>
           </FadeIn>

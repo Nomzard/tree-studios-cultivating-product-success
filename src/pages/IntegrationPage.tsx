@@ -174,14 +174,14 @@ const IntegrationPage = () => {
                 Ready to connect {integration.name}?
               </h3>
               <p className="text-primary-foreground/80 mb-6 max-w-md mx-auto">
-                Book a demo and we'll show you how the {integration.name}{" "}
-                integration works with your setup.
+                Sign up free and connect {integration.name} to your strategy
+                tree in minutes.
               </p>
               <Link
-                to="/demo"
+                to="/signup"
                 className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
               >
-                Book a demo
+                Sign Up Free
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

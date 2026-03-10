@@ -101,11 +101,11 @@ const Index = () => {
               <FadeIn variant="fadeUp" delay={0.4}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    to="/demo"
+                    to="/signup"
                     className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
                   >
-                    Join the conversation
-                    <MessageCircle className="h-4 w-4" />
+                    Get Started Free
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     to="/produkt"

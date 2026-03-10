@@ -20,7 +20,7 @@ const footerLinks = [
   { label: "Guides", path: "/guides" },
   { label: "FAQ", path: "/faq" },
   { label: "About", path: "/about" },
-  { label: "Book a Demo", path: "/demo" },
+  { label: "Sign Up Free", path: "/signup" },
 ];
 
 const pageTransition = {
@@ -84,14 +84,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             ))}
             <Link
-              to="/demo"
+              to="/signup"
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all active:scale-95 ${
                 isTransparent
                   ? "bg-sand text-forest hover:opacity-90"
                   : "bg-primary text-primary-foreground hover:opacity-90"
               }`}
             >
-              Book a Demo
+              Sign Up Free
             </Link>
           </nav>
 
@@ -135,11 +135,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </Link>
                 ))}
                 <Link
-                  to="/demo"
+                  to="/signup"
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium text-center mt-2 active:scale-95 transition-transform"
                 >
-                  Book a Demo
+                  Sign Up Free
                 </Link>
               </nav>
             </motion.div>
