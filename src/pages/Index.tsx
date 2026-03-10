@@ -1,5 +1,6 @@
 import heroImg from "@/assets/hero-illustration.jpg";
 import FadeIn from "@/components/FadeIn";
+import SEO, { organizationSchema, websiteSchema, softwareSchema } from "@/components/SEO";
 import DottedArrow from "@/components/DottedArrow";
 import { Link } from "react-router-dom";
 import {
