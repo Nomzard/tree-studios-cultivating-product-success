@@ -20,7 +20,7 @@ const footerLinks = [
   { label: "Guides", path: "/guides" },
   { label: "FAQ", path: "/faq" },
   { label: "About", path: "/about" },
-  { label: "Book a Demo", path: "/demo" },
+  { label: "Sign Up Free", path: "/signup" },
 ];
 
 const pageTransition = {
