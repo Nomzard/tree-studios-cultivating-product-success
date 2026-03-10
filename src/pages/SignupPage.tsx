@@ -10,17 +10,6 @@ const benefits = [
 ];
 
 const SignupPage = () => {
-  const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-    toast({
-      title: "Account created!",
-      description: "Check your email to verify your account.",
-    });
-  };
 
   return (
     <div>
