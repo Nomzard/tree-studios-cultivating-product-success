@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import SEO, { organizationSchema } from "@/components/SEO";
 import teamWontstop from "@/assets/team-wontstop.svg";
 import teamChilly from "@/assets/team-chilly.svg";
 import teamBueno from "@/assets/team-bueno.svg";
