@@ -84,14 +84,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             ))}
             <Link
-              to="/demo"
+              to="/signup"
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all active:scale-95 ${
                 isTransparent
                   ? "bg-sand text-forest hover:opacity-90"
                   : "bg-primary text-primary-foreground hover:opacity-90"
               }`}
             >
-              Book a Demo
+              Sign Up Free
             </Link>
           </nav>
 
