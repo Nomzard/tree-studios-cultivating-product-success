@@ -1,5 +1,6 @@
 import heroImg from "@/assets/hero-illustration.jpg";
 import FadeIn from "@/components/FadeIn";
+import SEO, { organizationSchema, websiteSchema, softwareSchema } from "@/components/SEO";
 import DottedArrow from "@/components/DottedArrow";
 import { Link } from "react-router-dom";
 import {
@@ -60,6 +61,12 @@ const BlobShape = ({
 const Index = () => {
   return (
     <div className="overflow-hidden">
+      <SEO
+        title="Tree Studios – Product Strategy Alignment Tool"
+        description="Tree Studios helps product organizations visually connect business goals, product strategy, and team work. See how your roadmap connects to strategy."
+        path="/"
+        jsonLd={[organizationSchema, websiteSchema, softwareSchema]}
+      />
       {/* Hero */}
       <section className="relative bg-forest min-h-[90vh] flex flex-col justify-center">
         <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
@@ -94,7 +101,7 @@ const Index = () => {
               <FadeIn variant="fadeUp" delay={0.4}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    to="/"
+                    to="/demo"
                     className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
                   >
                     Join the conversation

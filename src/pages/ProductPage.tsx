@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import SEO, { softwareSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -46,6 +47,12 @@ const features = [
 const ProductPage = () => {
   return (
     <div>
+      <SEO
+        title="Product – The Strategy Tree"
+        description="Tree Studios replaces scattered roadmaps with a living strategy tree that shows how everything connects — from business strategy to daily team work."
+        path="/product"
+        jsonLd={softwareSchema}
+      />
       {/* Hero */}
       <section className="container mx-auto px-6 py-20 md:py-28">
         <div className="max-w-3xl">
@@ -159,7 +166,7 @@ const ProductPage = () => {
               We'd love to show you how it can look for your organization.
             </p>
             <Link
-              to="/"
+              to="/demo"
               className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               Get Started
