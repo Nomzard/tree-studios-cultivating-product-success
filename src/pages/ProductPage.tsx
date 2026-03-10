@@ -166,7 +166,7 @@ const ProductPage = () => {
               We'd love to show you how it can look for your organization.
             </p>
             <Link
-              to="/"
+              to="/demo"
               className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-lg font-medium hover:opacity-90 transition-opacity"
             >
               Get Started
