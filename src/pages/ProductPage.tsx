@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import SEO, { softwareSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
