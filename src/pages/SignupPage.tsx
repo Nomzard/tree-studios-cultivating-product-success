@@ -1,8 +1,6 @@
 import FadeIn from "@/components/FadeIn";
 import SEO, { organizationSchema } from "@/components/SEO";
-import { CheckCircle2, ArrowRight, Shield, Zap } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { CheckCircle2, Shield, Zap } from "lucide-react";
 
 const benefits = [
   "Free to start — no credit card required",
