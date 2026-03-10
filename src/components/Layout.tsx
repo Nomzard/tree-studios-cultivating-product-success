@@ -5,10 +5,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 
 const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Product", path: "/produkt" },
-  { label: "Pricing", path: "/priser" },
-  { label: "Team", path: "/team" },
+  { label: "Product", path: "/product" },
+  { label: "Integrations", path: "/integrations" },
+  { label: "Pricing", path: "/pricing" },
+  { label: "Guides", path: "/guides" },
+  { label: "FAQ", path: "/faq" },
+  { label: "About", path: "/about" },
+];
+
+const footerLinks = [
+  { label: "Product", path: "/product" },
+  { label: "Integrations", path: "/integrations" },
+  { label: "Pricing", path: "/pricing" },
+  { label: "Guides", path: "/guides" },
+  { label: "FAQ", path: "/faq" },
+  { label: "About", path: "/about" },
+  { label: "Book a Demo", path: "/demo" },
 ];
 
 const pageTransition = {
@@ -53,7 +65,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -72,14 +84,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </Link>
             ))}
             <Link
-              to="/"
+              to="/demo"
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all active:scale-95 ${
                 isTransparent
                   ? "bg-sand text-forest hover:opacity-90"
                   : "bg-primary text-primary-foreground hover:opacity-90"
               }`}
             >
-              Login
+              Book a Demo
             </Link>
           </nav>
 
@@ -88,6 +100,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               isTransparent ? "text-primary-foreground" : "text-foreground"
             }`}
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation menu"
           >
             {mobileOpen ? (
               <X className="h-6 w-6" />
@@ -122,11 +135,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </Link>
                 ))}
                 <Link
-                  to="/"
+                  to="/demo"
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium text-center mt-2 active:scale-95 transition-transform"
                 >
-                  Get Started
+                  Book a Demo
                 </Link>
               </nav>
             </motion.div>
@@ -171,8 +184,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <h4 className="text-sm font-semibold text-foreground mb-3">
                   Pages
                 </h4>
-                <div className="flex flex-col gap-2">
-                  {navItems.map((item) => (
+                <nav className="flex flex-col gap-2" aria-label="Footer navigation">
+                  {footerLinks.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
@@ -181,7 +194,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                       {item.label}
                     </Link>
                   ))}
-                </div>
+                </nav>
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-foreground mb-3">
