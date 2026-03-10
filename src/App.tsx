@@ -12,7 +12,7 @@ import TeamPage from "./pages/TeamPage";
 import FAQPage from "./pages/FAQPage";
 import GuidesPage from "./pages/GuidesPage";
 import GuidePage from "./pages/GuidePage";
-import DemoPage from "./pages/DemoPage";
+import SignupPage from "./pages/SignupPage";
 import IntegrationsPage from "./pages/IntegrationsPage";
 import IntegrationPage from "./pages/IntegrationPage";
 import NotFound from "./pages/NotFound";
