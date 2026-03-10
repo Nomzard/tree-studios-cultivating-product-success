@@ -59,7 +59,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
             <img
               src={treeStudiosLogo}
               alt="Tree Studios"
-              className={`h-10 md:h-11 w-auto transition-all group-hover:scale-105 ${
+              className={`h-12 md:h-14 w-auto transition-all group-hover:scale-105 ${
               isTransparent ? "brightness-0 invert" : ""}`
               } />
             
