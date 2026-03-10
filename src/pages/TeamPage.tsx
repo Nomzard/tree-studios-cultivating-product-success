@@ -43,6 +43,12 @@ const members = [
 const TeamPage = () => {
   return (
     <div>
+      <SEO
+        title="About – The Team Behind Tree Studios"
+        description="Meet the team behind Tree Studios. Built by product people in Stockholm, Sweden, who saw the alignment problem firsthand and decided to fix it."
+        path="/about"
+        jsonLd={organizationSchema}
+      />
       <section className="container mx-auto px-6 py-20 md:py-28">
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center mb-16">

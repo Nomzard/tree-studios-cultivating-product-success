@@ -43,7 +43,7 @@ const PricingPage = () => {
                 challenges. No strings attached.
               </p>
               <Link
-                to="/"
+                to="/demo"
                 className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
               >
                 Get in touch
