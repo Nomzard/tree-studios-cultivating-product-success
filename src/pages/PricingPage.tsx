@@ -1,10 +1,17 @@
 import FadeIn from "@/components/FadeIn";
+import SEO, { organizationSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const PricingPage = () => {
   return (
     <div>
+      <SEO
+        title="Pricing – Simple, Honest Pricing"
+        description="No hidden fees, no long lock-in periods. Explore Tree Studios pricing plans for product teams of any size. Start free and grow at your own pace."
+        path="/pricing"
+        jsonLd={organizationSchema}
+      />
       <section className="container mx-auto px-6 py-20 md:py-28">
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center mb-16">
