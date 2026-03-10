@@ -61,6 +61,12 @@ const BlobShape = ({
 const Index = () => {
   return (
     <div className="overflow-hidden">
+      <SEO
+        title="Tree Studios – Product Strategy Alignment Tool"
+        description="Tree Studios helps product organizations visually connect business goals, product strategy, and team work. See how your roadmap connects to strategy."
+        path="/"
+        jsonLd={[organizationSchema, websiteSchema, softwareSchema]}
+      />
       {/* Hero */}
       <section className="relative bg-forest min-h-[90vh] flex flex-col justify-center">
         <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />

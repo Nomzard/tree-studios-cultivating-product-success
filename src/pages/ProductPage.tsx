@@ -47,6 +47,12 @@ const features = [
 const ProductPage = () => {
   return (
     <div>
+      <SEO
+        title="Product – The Strategy Tree"
+        description="Tree Studios replaces scattered roadmaps with a living strategy tree that shows how everything connects — from business strategy to daily team work."
+        path="/product"
+        jsonLd={softwareSchema}
+      />
       {/* Hero */}
       <section className="container mx-auto px-6 py-20 md:py-28">
         <div className="max-w-3xl">
