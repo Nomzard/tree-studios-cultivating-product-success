@@ -68,7 +68,7 @@ const Index = () => {
         jsonLd={[organizationSchema, websiteSchema, softwareSchema]}
       />
       {/* Hero */}
-      <section className="relative bg-forest min-h-[90vh] flex flex-col justify-center">
+      <section className="relative bg-primary min-h-[90vh] flex flex-col justify-center">
         <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
         <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
         <BlobShape className="top-1/3 right-1/4 w-48 h-48" color="bg-accent/8" />
