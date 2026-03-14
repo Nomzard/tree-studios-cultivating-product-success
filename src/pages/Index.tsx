@@ -129,7 +129,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--primary))" to="hsl(var(--background))" />
+      <WaveDivider from="hsl(var(--secondary-foreground))" to="hsl(var(--background))" />
 
       {/* Dotted arrow: Hero → Why */}
       <div className="relative -mt-16 mb--8 flex justify-center z-20">
