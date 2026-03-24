@@ -97,7 +97,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
             )}
             <Link
               to="/signup"
-              className="px-5 py-2 rounded-full text-sm font-medium transition-all active:scale-95 bg-primary text-primary-foreground hover:opacity-90 ml-1">
+              className="px-5 py-2 rounded-full text-sm font-medium transition-all active:scale-95 bg-terracotta text-white hover:opacity-90 ml-1">
               Login
             </Link>
           </nav>
