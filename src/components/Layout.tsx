@@ -195,14 +195,24 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
                 If this project brings you value, consider buying me a coffee to keep it growing.
               </p>
             </div>
-            <a
-              href="https://buymeacoffee.com/fredrikgoth"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-[#000000] font-semibold px-5 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm"
-            >
-              ☕ Buy me a coffee
-            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-3">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                <span>Designed & built in Sweden</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Shield className="h-4 w-4 text-primary flex-shrink-0" />
+                <span>All infrastructure hosted in Europe</span>
+              </div>
+              <a
+                href="https://buymeacoffee.com/fredrikgoth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-[#000000] font-semibold px-5 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm"
+              >
+                ☕ Buy me a coffee
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -210,16 +220,6 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
       <footer className="border-t border-border bg-card">
         <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
           {/* Sweden / Europe trust badge */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 pb-8 border-b border-border">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-              <span>Designed & built in Sweden</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4 text-primary flex-shrink-0" />
-              <span>All infrastructure hosted in Europe</span>
-            </div>
-          </div>
 
           <div className="flex flex-col md:flex-row justify-between gap-8">
             <div className="max-w-xs">
