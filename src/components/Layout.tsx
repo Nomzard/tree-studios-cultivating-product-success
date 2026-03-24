@@ -57,8 +57,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const isHome = location.pathname === "/";
-  const isTransparent = isHome && !scrolled && !mobileOpen;
+  const isTransparent = false;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
