@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Menu, X, MapPin, Shield } from "lucide-react";
+import { Menu, X, MapPin, Shield, Sun, Moon, Monitor } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 
 const navItems = [
