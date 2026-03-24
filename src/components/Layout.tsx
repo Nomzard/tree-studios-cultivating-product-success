@@ -16,7 +16,6 @@ const navItems = [
 const footerLinks = [
 { label: "Product", path: "/product" },
 { label: "Integrations", path: "/integrations" },
-{ label: "Pricing", path: "/pricing" },
 { label: "Guides", path: "/guides" },
 { label: "FAQ", path: "/faq" },
 { label: "About", path: "/about" },
