@@ -246,7 +246,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--card))" to="hsl(var(--background))" />
+      
 
       {/* Dotted arrow: Problems → What we do */}
       <div className="relative -mt-14 mb-0 flex justify-start pl-[20%] z-20">
