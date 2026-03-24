@@ -9,10 +9,10 @@
     --background: 140 40% 98%;
     --foreground: 142 30% 15%;
 
-    --card: 140 35% 96%;
+    --card: 0 0% 100%;
     --card-foreground: 142 30% 15%;
 
-    --popover: 140 40% 98%;
+    --popover: 140 30% 97%;
     --popover-foreground: 142 30% 15%;
 
     --primary: 142 70% 40%;
@@ -27,7 +27,7 @@
     --accent: 142 60% 35%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 140 20% 88%;
