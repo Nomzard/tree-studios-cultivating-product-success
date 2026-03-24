@@ -362,7 +362,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
+      
 
     </div>
   );
