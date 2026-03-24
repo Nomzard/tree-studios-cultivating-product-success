@@ -188,17 +188,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dotted arrow: Problems → What we do */}
-      <div className="relative -mt-10 -mb-6 flex justify-start pl-[20%] z-20">
-        <DottedArrow
-          path="M190,10 C140,15 120,60 60,45 Q20,38 10,75"
-          width={200}
-          height={85}
-          className="w-28 md:w-44 opacity-60"
-          delay={0.5}
-          duration={1.6}
-        />
-      </div>
 
       {/* What we do */}
       <section className="relative">
