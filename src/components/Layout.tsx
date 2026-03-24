@@ -76,43 +76,36 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
         }>
         
         <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
+          {/* Logo — floats left */}
           <Link to="/" className="flex items-center gap-2 group">
             <img
               src={treeStudiosLogo}
               alt="Tree Studios"
-              className={`h-12 md:h-14 w-auto transition-all group-hover:scale-105 ${
-              isTransparent ? "brightness-0 invert" : ""}`
-              } />
-            
+              className="h-12 md:h-14 w-auto transition-all group-hover:scale-105"
+            />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Nav pill — floats right */}
+          <nav className="hidden md:flex items-center gap-1 bg-background/60 backdrop-blur-sm rounded-full px-2 py-1.5 border border-border/50">
             {navItems.map((item) =>
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium transition-colors ${
-              isTransparent ?
+              className={`text-sm font-medium px-4 py-2 rounded-full transition-colors ${
               location.pathname === item.path ?
-              "text-sand" :
-              "text-primary-foreground/70 hover:text-primary-foreground" :
-              location.pathname === item.path ?
-              "text-primary" :
-              "text-muted-foreground hover:text-primary"}`
+              "bg-primary text-primary-foreground" :
+              "text-muted-foreground hover:text-foreground hover:bg-muted"}`
               }>
-              
                 {item.label}
               </Link>
             )}
             <Link
               to="/signup"
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all active:scale-95 ${
-              isTransparent ?
-              "bg-sand text-forest hover:opacity-90" :
-              "bg-primary text-primary-foreground hover:opacity-90"}`
-              }>Login
-
-
+              className="px-5 py-2 rounded-full text-sm font-medium transition-all active:scale-95 bg-primary text-primary-foreground hover:opacity-90 ml-1">
+              Login
             </Link>
           </nav>
 
