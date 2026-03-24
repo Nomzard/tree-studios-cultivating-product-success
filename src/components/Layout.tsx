@@ -208,8 +208,11 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
               </div>
             </div>
           </div>
-          <div className="mt-10 pt-6 border-t border-border text-center text-xs text-muted-foreground">
-            © 2026 Tree Studios. All rights reserved.
+          <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-muted-foreground">
+              © 2026 Tree Studios. All rights reserved.
+            </span>
+            <ThemeToggle />
           </div>
         </div>
       </footer>
