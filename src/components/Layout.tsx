@@ -209,18 +209,13 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
               <ThemeToggle />
             </div>
           </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-border bg-card">
-        <div className="container mx-auto px-4 md:px-6 py-6">
-          <div className="flex items-center justify-center">
+          <div className="mt-6 text-center">
             <span className="text-xs text-muted-foreground">
               © 2026 Tree Studios. All rights reserved.
             </span>
           </div>
         </div>
-      </footer>
+      </section>
     </div>);
 
 };
