@@ -42,7 +42,7 @@ const Index = () => {
         jsonLd={[organizationSchema, websiteSchema, softwareSchema]}
       />
       {/* Hero */}
-      <section className="relative bg-secondary-foreground min-h-[80vh] flex flex-col justify-center">
+      <section className="relative min-h-[80vh] flex flex-col justify-center">
         <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
         <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
         <BlobShape className="top-1/3 right-1/4 w-48 h-48" color="bg-accent/8" />
@@ -57,16 +57,16 @@ const Index = () => {
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-tight mb-6">
                   See how your
                   <br />
-                  <span className="text-sand">roadmap connects</span>
+                  <span className="text-moss">roadmap connects</span>
                   <br />
                   to strategy
                 </h1>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
-                <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-lg">
                   When stakeholders ask "why are we working on this?" — you shouldn't 
                   have to dig through slides. Tree Studios makes the link between 
                   your roadmap and product strategy visual, shareable, and always up to date.
@@ -83,7 +83,7 @@ const Index = () => {
                   </Link>
                   <Link
                     to="/produkt"
-                    className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary-foreground/10 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-full font-medium hover:bg-muted transition-colors"
                   >
                     See how it works
                   </Link>
