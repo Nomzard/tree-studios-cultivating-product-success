@@ -68,15 +68,10 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top ${
-        scrolled ?
-        "bg-secondary/80 backdrop-blur-md border-b border-border" :
-        "bg-secondary"}`
-        }>
+      <header className="fixed top-0 left-0 right-0 z-50 safe-top">
         
         <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
-          {/* Logo — floats left */}
+          {/* Logo — free floating left */}
           <Link to="/" className="flex items-center gap-2 group">
             <img
               src={treeStudiosLogo}
@@ -85,11 +80,8 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
             />
           </Link>
 
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Nav pill — floats right */}
-          <nav className="hidden md:flex items-center gap-1 bg-background/60 backdrop-blur-sm rounded-full px-2 py-1.5 border border-border/50">
+          {/* Nav pill — free floating right */}
+          <nav className="hidden md:flex items-center gap-1 bg-background/70 backdrop-blur-md rounded-full px-2 py-1.5 border border-border/50 shadow-sm">
             {navItems.map((item) =>
             <Link
               key={item.path}
@@ -110,17 +102,10 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
           </nav>
 
           <button
-            className={`md:hidden p-2 -mr-2 active:scale-90 transition-transform ${
-            isTransparent ? "text-primary-foreground" : "text-foreground"}`
-            }
+            className="md:hidden p-2 -mr-2 active:scale-90 transition-transform text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation menu">
-            
-            {mobileOpen ?
-            <X className="h-6 w-6" /> :
-
-            <Menu className="h-6 w-6" />
-            }
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
