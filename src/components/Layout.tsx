@@ -213,12 +213,11 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
       </section>
 
       <footer className="border-t border-border bg-card">
-        <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="container mx-auto px-4 md:px-6 py-6">
+          <div className="flex items-center justify-center">
             <span className="text-xs text-muted-foreground">
               © 2026 Tree Studios. All rights reserved.
             </span>
-            <ThemeToggle />
           </div>
         </div>
       </footer>
