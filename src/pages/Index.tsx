@@ -34,7 +34,7 @@ const BlobShape = ({
 
 const Index = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-background">
       <SEO
         title="Tree Studios – Product Strategy Alignment Tool"
         description="Tree Studios helps product organizations visually connect business goals, product strategy, and team work. See how your roadmap connects to strategy."
@@ -103,7 +103,6 @@ const Index = () => {
         </div>
       </section>
 
-      
       {/* Dotted arrow: Hero → Why */}
       <div className="relative -mt-12 -mb-6 flex justify-center z-20">
         <DottedArrow
@@ -116,7 +115,7 @@ const Index = () => {
       </div>
 
       {/* Why */}
-      <section className="relative bg-background">
+      <section className="relative">
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
         <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn variant="blur" duration={0.8}>
@@ -150,7 +149,7 @@ const Index = () => {
       </div>
 
       {/* Problem cards */}
-      <section className="relative bg-card">
+      <section className="relative">
         <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
 
         <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
@@ -228,7 +227,7 @@ const Index = () => {
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.12} variant={item.variant}>
-                <div className="bg-background rounded-[1.5rem] p-7 h-full border border-border hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="bg-card rounded-[1.5rem] p-7 h-full border border-border hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
                   <div className="w-12 h-12 rounded-[1rem] bg-terracotta/10 flex items-center justify-center mb-4 group-hover:bg-terracotta/20 transition-colors">
                     <item.icon className="h-6 w-6 text-terracotta" />
                   </div>
@@ -245,8 +244,6 @@ const Index = () => {
         </div>
       </section>
 
-      
-
       {/* Dotted arrow: Problems → What we do */}
       <div className="relative -mt-10 -mb-6 flex justify-start pl-[20%] z-20">
         <DottedArrow
@@ -260,7 +257,7 @@ const Index = () => {
       </div>
 
       {/* What we do */}
-      <section className="relative bg-background">
+      <section className="relative">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
         <div className="container mx-auto px-6 py-10 md:py-14">
           <div className="max-w-3xl mx-auto text-center">
@@ -307,17 +304,17 @@ const Index = () => {
       </div>
 
       {/* Values */}
-      <section className="relative bg-forest">
+      <section className="relative">
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
         <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
                 What changes in the first week
               </h2>
-              <p className="text-primary-foreground/70 text-lg leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 Real gains, not just promises. Here's what teams tell us.
               </p>
             </div>
@@ -345,13 +342,13 @@ const Index = () => {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.15} variant={item.variant}>
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-[1.25rem] bg-primary-foreground/10 flex items-center justify-center mx-auto mb-5 hover:scale-105 transition-transform">
+                  <div className="w-16 h-16 rounded-[1.25rem] bg-muted flex items-center justify-center mx-auto mb-5 hover:scale-105 transition-transform">
                     <item.icon className="h-7 w-7 text-terracotta" />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl text-primary-foreground mb-3">
+                  <h3 className="font-heading font-semibold text-xl text-foreground mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-primary-foreground/60 leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -360,8 +357,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      
 
     </div>
   );
