@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Menu, X, MapPin, Shield } from "lucide-react";
+import { Menu, X, MapPin, Shield, Sun, Moon, Monitor } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 
 const navItems = [
@@ -28,6 +29,35 @@ const pageTransition = {
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -8 },
   transition: { duration: 0.25, ease: "easeOut" as const }
+};
+
+const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const options = [
+    { value: "system", icon: Monitor, label: "System" },
+    { value: "light", icon: Sun, label: "Light" },
+    { value: "dark", icon: Moon, label: "Dark" },
+  ] as const;
+
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-border bg-muted p-1">
+      {options.map(({ value, icon: Icon, label }) => (
+        <button
+          key={value}
+          onClick={() => setTheme(value)}
+          className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+            theme === value
+              ? "bg-background text-foreground shadow-sm"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+          aria-label={`Switch to ${label} mode`}
+        >
+          <Icon className="h-3.5 w-3.5" />
+          <span className="hidden sm:inline">{label}</span>
+        </button>
+      ))}
+    </div>
+  );
 };
 
 const Layout = ({ children }: {children: React.ReactNode;}) => {
@@ -207,8 +237,11 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
               </div>
             </div>
           </div>
-          <div className="mt-10 pt-6 border-t border-border text-center text-xs text-muted-foreground">
-            © 2026 Tree Studios. All rights reserved.
+          <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-muted-foreground">
+              © 2026 Tree Studios. All rights reserved.
+            </span>
+            <ThemeToggle />
           </div>
         </div>
       </footer>
