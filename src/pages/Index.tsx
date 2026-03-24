@@ -248,7 +248,7 @@ const Index = () => {
       
 
       {/* Dotted arrow: Problems → What we do */}
-      <div className="relative -mt-14 mb-0 flex justify-start pl-[20%] z-20">
+      <div className="relative -mt-10 -mb-6 flex justify-start pl-[20%] z-20">
         <DottedArrow
           path="M190,10 C140,15 120,60 60,45 Q20,38 10,75"
           width={200}
