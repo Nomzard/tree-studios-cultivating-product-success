@@ -220,16 +220,6 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
       <footer className="border-t border-border bg-card">
         <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
           {/* Sweden / Europe trust badge */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-10 pb-8 border-b border-border">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-              <span>Designed & built in Sweden</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4 text-primary flex-shrink-0" />
-              <span>All infrastructure hosted in Europe</span>
-            </div>
-          </div>
 
           <div className="flex flex-col md:flex-row justify-between gap-8">
             <div className="max-w-xs">
