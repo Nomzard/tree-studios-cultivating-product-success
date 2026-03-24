@@ -199,7 +199,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
                 href="https://buymeacoffee.com/fredrikgoth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[#FFDD00] hover:bg-[#FFDD00]/85 text-[#000000] font-semibold px-4 py-1.5 rounded-full text-xs transition-all active:scale-95 shadow-sm"
+                className="inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/85 text-[#000000] font-semibold px-6 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm hover:shadow-md"
               >
                 ☕ Buy me a coffee
               </a>
