@@ -57,10 +57,10 @@ const Index = () => {
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-tight mb-6">
                   See how your
                   <br />
-                  <span className="text-sand">roadmap connects</span>
+                  <span className="text-moss">roadmap connects</span>
                   <br />
                   to strategy
                 </h1>
