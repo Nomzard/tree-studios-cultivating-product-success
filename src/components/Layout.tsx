@@ -183,30 +183,6 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
         </AnimatePresence>
       </main>
 
-      {/* Buy Me a Coffee CTA */}
-      <section className="border-t border-border bg-secondary/50">
-        <div className="container mx-auto px-4 md:px-6 py-8 md:py-10">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-2xl mx-auto text-center sm:text-left">
-            <div>
-              <p className="text-base font-medium text-foreground mb-1">
-                ☕ Enjoying Tree Studios?
-              </p>
-              <p className="text-sm text-muted-foreground">
-                If this project brings you value, consider buying me a coffee to keep it growing.
-              </p>
-            </div>
-            <a
-              href="https://buymeacoffee.com/fredrikgoth"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-[#000000] font-semibold px-5 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm"
-            >
-              ☕ Buy me a coffee
-            </a>
-          </div>
-        </div>
-      </section>
-
       <footer className="border-t border-border bg-card">
         <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
           {/* Sweden / Europe trust badge */}
