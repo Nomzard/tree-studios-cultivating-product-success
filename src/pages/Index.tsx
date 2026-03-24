@@ -223,18 +223,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dotted arrow: What we do → Values */}
-      <div className="relative -mt-6 -mb-4 flex justify-center z-20">
-        <DottedArrow
-          path="M10,15 Q80,5 100,50 T190,70"
-          width={200}
-          height={80}
-          className="w-24 md:w-36 opacity-50"
-          color="hsl(var(--sand))"
-          delay={0.3}
-          duration={1.4}
-        />
-      </div>
 
       {/* Values */}
       <section className="relative">
