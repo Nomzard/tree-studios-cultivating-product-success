@@ -20,32 +20,6 @@ import {
   Search,
 } from "lucide-react";
 
-/* Single SVG wave — top half is "from" color, bottom half is "to" color */
-const WaveDivider = ({
-  from,
-  to,
-}: {
-  from: string;
-  to: string;
-}) => (
-  <div className="w-full overflow-hidden leading-[0] relative" style={{ marginTop: '-1px', marginBottom: '-1px' }}>
-    <svg
-      viewBox="0 0 1440 120"
-      preserveAspectRatio="none"
-      className="block w-full h-[60px] md:h-[80px] lg:h-[120px]"
-    >
-      <path
-        d="M0,0 L0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,0 Z"
-        fill={from}
-      />
-      <path
-        d="M0,40 C240,100 480,0 720,50 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"
-        fill={to}
-      />
-    </svg>
-  </div>
-);
-
 const BlobShape = ({
   className = "",
   color = "bg-sand/10",
@@ -129,7 +103,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--secondary-foreground))" to="hsl(var(--background))" />
+      
 
       {/* Dotted arrow: Hero → Why */}
       <div className="relative -mt-16 mb--8 flex justify-center z-20">
@@ -272,7 +246,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--card))" to="hsl(var(--background))" />
+      
 
       {/* Dotted arrow: Problems → What we do */}
       <div className="relative -mt-14 mb-0 flex justify-start pl-[20%] z-20">
@@ -388,7 +362,7 @@ const Index = () => {
         </div>
       </section>
 
-      <WaveDivider from="hsl(var(--forest))" to="hsl(var(--background))" />
+      
 
     </div>
   );
