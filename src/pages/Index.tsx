@@ -294,7 +294,7 @@ const Index = () => {
       </section>
 
       {/* Dotted arrow: What we do → Values */}
-      <div className="relative -mt-4 mb-0 flex justify-center z-20">
+      <div className="relative -mt-6 -mb-4 flex justify-center z-20">
         <DottedArrow
           path="M10,15 Q80,5 100,50 T190,70"
           width={200}
