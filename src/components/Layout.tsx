@@ -31,6 +31,35 @@ const pageTransition = {
   transition: { duration: 0.25, ease: "easeOut" as const }
 };
 
+const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const options = [
+    { value: "system", icon: Monitor, label: "System" },
+    { value: "light", icon: Sun, label: "Light" },
+    { value: "dark", icon: Moon, label: "Dark" },
+  ] as const;
+
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-border bg-muted p-1">
+      {options.map(({ value, icon: Icon, label }) => (
+        <button
+          key={value}
+          onClick={() => setTheme(value)}
+          className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
+            theme === value
+              ? "bg-background text-foreground shadow-sm"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+          aria-label={`Switch to ${label} mode`}
+        >
+          <Icon className="h-3.5 w-3.5" />
+          <span className="hidden sm:inline">{label}</span>
+        </button>
+      ))}
+    </div>
+  );
+};
+
 const Layout = ({ children }: {children: React.ReactNode;}) => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
