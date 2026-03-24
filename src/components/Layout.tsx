@@ -70,9 +70,9 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
     <div className="min-h-screen flex flex-col">
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top ${
-        isTransparent ?
-        "bg-transparent" :
-        "bg-background/80 backdrop-blur-md border-b border-border"}`
+        scrolled ?
+        "bg-secondary/80 backdrop-blur-md border-b border-border" :
+        "bg-secondary"}`
         }>
         
         <div className="container mx-auto flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
