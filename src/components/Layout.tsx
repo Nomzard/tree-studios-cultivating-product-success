@@ -8,7 +8,6 @@ import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 const navItems = [
 { label: "Product", path: "/product" },
 { label: "Integrations", path: "/integrations" },
-{ label: "Pricing", path: "/pricing" },
 { label: "Guides", path: "/guides" },
 { label: "FAQ", path: "/faq" },
 { label: "About", path: "/about" }];
@@ -17,7 +16,6 @@ const navItems = [
 const footerLinks = [
 { label: "Product", path: "/product" },
 { label: "Integrations", path: "/integrations" },
-{ label: "Pricing", path: "/pricing" },
 { label: "Guides", path: "/guides" },
 { label: "FAQ", path: "/faq" },
 { label: "About", path: "/about" },
