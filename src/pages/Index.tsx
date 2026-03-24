@@ -66,7 +66,7 @@ const Index = () => {
                 </h1>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
-                <p className="text-lg text-primary-foreground/70 leading-relaxed mb-10 max-w-lg">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-lg">
                   When stakeholders ask "why are we working on this?" — you shouldn't 
                   have to dig through slides. Tree Studios makes the link between 
                   your roadmap and product strategy visual, shareable, and always up to date.
