@@ -42,7 +42,7 @@ const Index = () => {
         jsonLd={[organizationSchema, websiteSchema, softwareSchema]}
       />
       {/* Hero */}
-      <section className="relative bg-secondary-foreground min-h-[90vh] flex flex-col justify-center">
+      <section className="relative bg-secondary-foreground min-h-[80vh] flex flex-col justify-center">
         <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
         <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
         <BlobShape className="top-1/3 right-1/4 w-48 h-48" color="bg-accent/8" />
@@ -104,9 +104,8 @@ const Index = () => {
       </section>
 
       
-
       {/* Dotted arrow: Hero → Why */}
-      <div className="relative -mt-16 mb--8 flex justify-center z-20">
+      <div className="relative -mt-12 -mb-6 flex justify-center z-20">
         <DottedArrow
           path="M10,10 C60,10 80,60 140,50 Q180,45 190,80"
           width={200}
@@ -119,7 +118,7 @@ const Index = () => {
       {/* Why */}
       <section className="relative bg-background">
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
-        <div className="container mx-auto px-6 py-16 md:py-24">
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
@@ -138,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Dotted arrow: Why → Problems */}
-      <div className="relative -mt-4 mb-0 flex justify-end pr-[15%] z-20">
+      <div className="relative -mt-6 -mb-4 flex justify-end pr-[15%] z-20">
         <DottedArrow
           path="M10,10 Q50,70 100,40 T190,70"
           width={200}
@@ -154,7 +153,7 @@ const Index = () => {
       <section className="relative bg-card">
         <BlobShape className="bottom-10 left-0 w-72 h-72 translate-y-1/3" color="bg-sand/8" />
 
-        <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
+        <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="fadeDown">
              <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
@@ -249,7 +248,7 @@ const Index = () => {
       
 
       {/* Dotted arrow: Problems → What we do */}
-      <div className="relative -mt-14 mb-0 flex justify-start pl-[20%] z-20">
+      <div className="relative -mt-10 -mb-6 flex justify-start pl-[20%] z-20">
         <DottedArrow
           path="M190,10 C140,15 120,60 60,45 Q20,38 10,75"
           width={200}
@@ -263,7 +262,7 @@ const Index = () => {
       {/* What we do */}
       <section className="relative bg-background">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
-        <div className="container mx-auto px-6 py-16 md:py-24">
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
@@ -295,7 +294,7 @@ const Index = () => {
       </section>
 
       {/* Dotted arrow: What we do → Values */}
-      <div className="relative -mt-4 mb-0 flex justify-center z-20">
+      <div className="relative -mt-6 -mb-4 flex justify-center z-20">
         <DottedArrow
           path="M10,15 Q80,5 100,50 T190,70"
           width={200}
@@ -312,7 +311,7 @@ const Index = () => {
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
-        <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
+        <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
