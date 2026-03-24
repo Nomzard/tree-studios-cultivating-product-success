@@ -30,31 +30,25 @@ const pageTransition = {
 };
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
-  const options = [
-    { value: "system", icon: Monitor, label: "System" },
-    { value: "light", icon: Sun, label: "Light" },
-    { value: "dark", icon: Moon, label: "Dark" },
-  ] as const;
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const cycleTheme = () => {
+    if (theme === "system") setTheme("light");
+    else if (theme === "light") setTheme("dark");
+    else setTheme("system");
+  };
+  const Icon = theme === "system" ? Monitor : theme === "light" ? Sun : Moon;
+  const label = theme === "system" ? "System" : theme === "light" ? "Light" : "Dark";
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-border bg-muted p-1">
-      {options.map(({ value, icon: Icon, label }) => (
-        <button
-          key={value}
-          onClick={() => setTheme(value)}
-          className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all ${
-            theme === value
-              ? "bg-background text-foreground shadow-sm"
-              : "text-muted-foreground hover:text-foreground"
-          }`}
-          aria-label={`Switch to ${label} mode`}
-        >
-          <Icon className="h-3.5 w-3.5" />
-          <span className="hidden sm:inline">{label}</span>
-        </button>
-      ))}
-    </div>
+    <button
+      onClick={cycleTheme}
+      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+      aria-label={`Theme: ${label}. Click to change.`}
+      title={`Theme: ${label}`}
+    >
+      <Icon className="h-3.5 w-3.5" />
+      <span className="hidden sm:inline">{label}</span>
+    </button>
   );
 };
 
