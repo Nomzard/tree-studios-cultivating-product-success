@@ -83,7 +83,7 @@ const Index = () => {
                   </Link>
                   <Link
                     to="/produkt"
-                    className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:bg-primary-foreground/10 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-full font-medium hover:bg-muted transition-colors"
                   >
                     See how it works
                   </Link>
