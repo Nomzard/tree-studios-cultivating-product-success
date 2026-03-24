@@ -206,6 +206,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
               >
                 ☕ Buy me a coffee
               </a>
+              <ThemeToggle />
             </div>
           </div>
         </div>
