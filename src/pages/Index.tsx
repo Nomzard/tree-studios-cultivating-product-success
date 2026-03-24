@@ -51,11 +51,6 @@ const Index = () => {
         <div className="container mx-auto px-6 pt-28 pb-12 md:pt-40 md:pb-16 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <FadeIn variant="blur" duration={0.8}>
-                <p className="text-sm font-medium text-terracotta tracking-wide mb-5">
-                  For product teams who want clarity ✦
-                </p>
-              </FadeIn>
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-tight mb-6">
                   See how your
