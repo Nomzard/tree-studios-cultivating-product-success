@@ -177,45 +177,50 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
         </AnimatePresence>
       </main>
 
-      {/* Buy Me a Coffee CTA */}
-      <section className="border-t border-border bg-secondary/50">
-        <div className="container mx-auto px-4 md:px-6 py-8 md:py-10">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-2xl mx-auto text-center sm:text-left">
-            <div>
+      {/* Footer */}
+      <footer className="border-t border-border bg-card/80">
+        <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
+          {/* Top row: CTA + Coffee */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 pb-8 border-b border-border">
+            <div className="text-center md:text-left">
               <p className="text-base font-medium text-foreground mb-1">
                 ☕ Enjoying Tree Studios?
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground max-w-sm">
                 If this project brings you value, consider buying me a coffee to keep it growing.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-3">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+            <a
+              href="https://buymeacoffee.com/fredrikgoth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-[#000000] font-semibold px-6 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm hover:shadow-md"
+            >
+              ☕ Buy me a coffee
+            </a>
+          </div>
+
+          {/* Bottom row: Trust badges, copyright, theme */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2">
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <MapPin className="h-3.5 w-3.5 text-primary" />
                 <span>Designed & built in Sweden</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Shield className="h-4 w-4 text-primary flex-shrink-0" />
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                <Shield className="h-3.5 w-3.5 text-primary" />
                 <span>All infrastructure hosted in Europe</span>
               </div>
-              <a
-                href="https://buymeacoffee.com/fredrikgoth"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-2 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-[#000000] font-semibold px-5 py-2.5 rounded-full text-sm transition-all active:scale-95 shadow-sm"
-              >
-                ☕ Buy me a coffee
-              </a>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-xs text-muted-foreground">
+                © 2026 Tree Studios
+              </span>
               <ThemeToggle />
             </div>
           </div>
-          <div className="mt-6 text-center">
-            <span className="text-xs text-muted-foreground">
-              © 2026 Tree Studios. All rights reserved.
-            </span>
-          </div>
         </div>
-      </section>
+      </footer>
     </div>);
 
 };
