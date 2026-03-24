@@ -34,7 +34,7 @@ const BlobShape = ({
 
 const Index = () => {
   return (
-    <div className="overflow-hidden bg-background">
+    <div className="overflow-hidden bg-secondary">
       <SEO
         title="Tree Studios – Product Strategy Alignment Tool"
         description="Tree Studios helps product organizations visually connect business goals, product strategy, and team work. See how your roadmap connects to strategy."
