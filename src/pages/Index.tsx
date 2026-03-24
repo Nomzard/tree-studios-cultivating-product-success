@@ -262,7 +262,7 @@ const Index = () => {
       {/* What we do */}
       <section className="relative bg-background">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
-        <div className="container mx-auto px-6 py-16 md:py-24">
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
