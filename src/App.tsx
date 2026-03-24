@@ -22,7 +22,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="tree-studios-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
