@@ -219,47 +219,7 @@ const Layout = ({ children }: {children: React.ReactNode;}) => {
 
       <footer className="border-t border-border bg-card">
         <div className="container mx-auto px-4 md:px-6 py-10 md:py-12">
-          {/* Sweden / Europe trust badge */}
-
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            <div className="max-w-xs">
-              <div className="flex items-center gap-2 mb-3">
-                <img src={treeStudiosLogo} alt="Tree Studios" className="h-7 w-auto" />
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                We help product organizations make the connection between
-                strategy and real impact visible — for everyone.
-              </p>
-            </div>
-            <div className="flex gap-12">
-              <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">
-                  Pages
-                </h4>
-                <nav className="flex flex-col gap-2" aria-label="Footer navigation">
-                  {footerLinks.map((item) =>
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    
-                      {item.label}
-                    </Link>
-                  )}
-                </nav>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">
-                  Contact
-                </h4>
-                <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                  <span>hello@treestudios.se</span>
-                  <span>Stockholm, Sweden</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-xs text-muted-foreground">
               © 2026 Tree Studios. All rights reserved.
             </span>
