@@ -81,12 +81,6 @@ const Index = () => {
                     Get Started Free
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <Link
-                    to="/produkt"
-                    className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-full font-medium hover:bg-muted transition-colors"
-                  >
-                    See how it works
-                  </Link>
                 </div>
               </FadeIn>
             </div>
