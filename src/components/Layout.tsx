@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import treeStudiosLogo from "@/assets/tree-studios-logo.svg";
 
 const navItems = [
+{ label: "Home", path: "/" },
 { label: "Product", path: "/product" },
 { label: "Integrations", path: "/integrations" },
 { label: "Guides", path: "/guides" },
