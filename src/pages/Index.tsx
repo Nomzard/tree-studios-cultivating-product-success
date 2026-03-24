@@ -311,7 +311,7 @@ const Index = () => {
         <BlobShape className="top-10 right-10 w-64 h-64" color="bg-leaf/10" />
         <BlobShape className="bottom-10 left-20 w-48 h-48" color="bg-sand/8" />
 
-        <div className="container mx-auto px-6 py-16 md:py-24 relative z-10">
+        <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
             <div className="max-w-2xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-primary-foreground mb-4">
