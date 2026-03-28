@@ -49,8 +49,7 @@ const Index = () => {
         <BlobShape className="bottom-1/4 left-1/4 w-56 h-56" color="bg-moss/10" />
 
         <div className="container mx-auto px-6 pt-28 pb-12 md:pt-40 md:pb-16 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="max-w-3xl mx-auto text-center">
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-tight mb-6">
                   See how your
@@ -61,14 +60,14 @@ const Index = () => {
                 </h1>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.25} duration={0.7}>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-lg">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-lg mx-auto">
                   When stakeholders ask "why are we working on this?" — you shouldn't 
                   have to dig through slides. Tree Studios makes the link between 
                   your roadmap and product strategy visual, shareable, and always up to date.
                 </p>
               </FadeIn>
               <FadeIn variant="fadeUp" delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex justify-center">
                   <Link
                     to="/signup"
                     className="inline-flex items-center justify-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
@@ -78,16 +77,6 @@ const Index = () => {
                   </Link>
                 </div>
               </FadeIn>
-            </div>
-            <FadeIn variant="scale" delay={0.3} duration={0.9}>
-              <div className="rounded-[2rem] overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500">
-                <img
-                  src={heroImg}
-                  alt="Illustration of a tree symbolizing connected work"
-                  className="w-full"
-                />
-              </div>
-            </FadeIn>
           </div>
         </div>
       </section>
