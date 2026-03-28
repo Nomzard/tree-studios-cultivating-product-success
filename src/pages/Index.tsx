@@ -120,7 +120,7 @@ const Index = () => {
             </div>
           </FadeIn>
 
-          <div className="relative grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="relative grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
             {[
               {
@@ -140,12 +140,6 @@ const Index = () => {
                 title: "\"Alignment dies after planning\"",
                 desc: "After the planning workshop, teams fall back into their own lanes. The shared picture fades within weeks.",
                 variant: "fadeUp" as const,
-              },
-              {
-                icon: AlertTriangle,
-                title: "\"Not another tool to maintain\"",
-                desc: "If it becomes yet another place to update, adoption drops. It needs to fit into how you already work.",
-                variant: "fadeRight" as const,
               },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.12} variant={item.variant}>
