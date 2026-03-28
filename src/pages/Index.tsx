@@ -120,7 +120,7 @@ const Index = () => {
             </div>
           </FadeIn>
 
-          <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="relative grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
             {[
               {
