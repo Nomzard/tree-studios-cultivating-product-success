@@ -3,6 +3,18 @@ import SEO, { organizationSchema } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Clock, Tag } from "lucide-react";
 
+const BlobShape = ({
+  className = "",
+  color = "bg-sand/10",
+}: {
+  className?: string;
+  color?: string;
+}) => (
+  <div
+    className={`absolute rounded-[40%_60%_70%_30%/40%_50%_60%_50%] ${color} blur-3xl pointer-events-none ${className}`}
+  />
+);
+
 const guides = [
   {
     slug: "product-strategy-alignment",
@@ -47,7 +59,7 @@ const GuidesPage = () => {
   const rest = guides.filter((g) => !g.featured);
 
   return (
-    <div>
+    <div className="overflow-hidden bg-secondary">
       <SEO
         title="Guides – Product Strategy & Alignment Resources"
         description="In-depth guides on product strategy alignment, roadmap planning, outcome-driven teams, and building a strategy tree. Written by the Tree Studios team."
@@ -55,91 +67,95 @@ const GuidesPage = () => {
         jsonLd={organizationSchema}
       />
 
-      <section className="container mx-auto px-6 py-20 md:py-28">
-        <FadeIn>
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
-              Resources
-            </p>
-            <h1 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6">
-              Guides & frameworks
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Practical insights on product strategy, alignment, and
-              outcome-driven work — from the team building Tree Studios.
-            </p>
-          </div>
-        </FadeIn>
-
-        {/* Featured guide */}
-        {featured && (
+      <section className="relative">
+        <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
+        <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn>
-            <Link
-              to={`/guides/${featured.slug}`}
-              className="block max-w-4xl mx-auto mb-16 group"
-            >
-              <div className="bg-primary rounded-2xl p-8 md:p-12 text-primary-foreground hover:opacity-95 transition-opacity">
-                <div className="flex items-center gap-2 text-primary-foreground/60 text-sm mb-4">
-                  <BookOpen className="h-4 w-4" />
-                  <span>Featured Guide</span>
-                  <span className="mx-2">·</span>
-                  <Clock className="h-4 w-4" />
-                  <span>{featured.readTime}</span>
-                </div>
-                <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-4 group-hover:underline decoration-2 underline-offset-4">
-                  {featured.title}
-                </h2>
-                <p className="text-primary-foreground/80 leading-relaxed max-w-2xl mb-6">
-                  {featured.description}
-                </p>
-                <span className="inline-flex items-center gap-2 font-medium text-sm">
-                  Read guide
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
+            <div className="max-w-2xl mx-auto text-center mb-16">
+              <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
+                Resources
+              </p>
+              <h1 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6">
+                Guides & frameworks
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Practical insights on product strategy, alignment, and
+                outcome-driven work — from the team building Tree Studios.
+              </p>
+            </div>
           </FadeIn>
-        )}
 
-        {/* Guide grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {rest.map((guide, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
+          {/* Featured guide */}
+          {featured && (
+            <FadeIn>
               <Link
-                to={`/guides/${guide.slug}`}
-                className="block h-full group"
+                to={`/guides/${featured.slug}`}
+                className="block max-w-4xl mx-auto mb-16 group"
               >
-                <div className="bg-card border border-border rounded-2xl p-7 h-full flex flex-col hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
-                    <Clock className="h-3.5 w-3.5" />
-                    <span>{guide.readTime}</span>
+                <div className="bg-terracotta rounded-[1.5rem] p-8 md:p-12 text-white hover:opacity-95 transition-opacity">
+                  <div className="flex items-center gap-2 text-white/60 text-sm mb-4">
+                    <BookOpen className="h-4 w-4" />
+                    <span>Featured Guide</span>
+                    <span className="mx-2">·</span>
+                    <Clock className="h-4 w-4" />
+                    <span>{featured.readTime}</span>
                   </div>
-                  <h3 className="font-heading font-semibold text-lg text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
-                    {guide.description}
+                  <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-4 group-hover:underline decoration-2 underline-offset-4">
+                    {featured.title}
+                  </h2>
+                  <p className="text-white/80 leading-relaxed max-w-2xl mb-6">
+                    {featured.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {guide.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center gap-1 text-xs bg-secondary text-secondary-foreground px-2.5 py-1 rounded-full"
-                      >
-                        <Tag className="h-3 w-3" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  <span className="inline-flex items-center gap-2 font-medium text-sm">
+                    Read guide
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </div>
               </Link>
             </FadeIn>
-          ))}
+          )}
+
+          {/* Guide grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {rest.map((guide, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <Link
+                  to={`/guides/${guide.slug}`}
+                  className="block h-full group"
+                >
+                  <div className="bg-card border border-border rounded-[1.5rem] p-7 h-full flex flex-col hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300">
+                    <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+                      <Clock className="h-3.5 w-3.5" />
+                      <span>{guide.readTime}</span>
+                    </div>
+                    <h3 className="font-heading font-semibold text-lg text-foreground mb-3 group-hover:text-terracotta transition-colors">
+                      {guide.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
+                      {guide.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {guide.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-flex items-center gap-1 text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full"
+                        >
+                          <Tag className="h-3 w-3" />
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-card">
-        <div className="container mx-auto px-6 py-16">
+      <section className="relative">
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-2xl font-heading font-semibold text-foreground mb-4">
@@ -150,7 +166,7 @@ const GuidesPage = () => {
               </p>
               <Link
                 to="/signup"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
               >
                 Sign Up Free
                 <ArrowRight className="h-4 w-4" />

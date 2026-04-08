@@ -3,6 +3,18 @@ import SEO, { organizationSchema } from "@/components/SEO";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle2, Puzzle } from "lucide-react";
 
+const BlobShape = ({
+  className = "",
+  color = "bg-sand/10",
+}: {
+  className?: string;
+  color?: string;
+}) => (
+  <div
+    className={`absolute rounded-[40%_60%_70%_30%/40%_50%_60%_50%] ${color} blur-3xl pointer-events-none ${className}`}
+  />
+);
+
 const integrationContent: Record<
   string,
   {
@@ -92,7 +104,7 @@ const IntegrationPage = () => {
   if (!integration) return <Navigate to="/integrations" replace />;
 
   return (
-    <div>
+    <div className="overflow-hidden bg-secondary">
       <SEO
         title={integration.title}
         description={integration.description}
@@ -100,92 +112,96 @@ const IntegrationPage = () => {
         jsonLd={organizationSchema}
       />
 
-      <section className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl mx-auto">
-          <FadeIn>
-            <Link
-              to="/integrations"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              All integrations
-            </Link>
-
-            <div className="flex items-center gap-4 mb-6">
-              <div
-                className={`w-14 h-14 rounded-xl ${integration.color} flex items-center justify-center`}
-              >
-                <Puzzle className={`h-7 w-7 ${integration.textColor}`} />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-heading font-semibold text-foreground">
-                {integration.title}
-              </h1>
-            </div>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              {integration.description}
-            </p>
-          </FadeIn>
-
-          {/* Features */}
-          <FadeIn delay={0.1}>
-            <div className="bg-card border border-border rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-heading font-semibold text-foreground mb-6">
-                What you get
-              </h2>
-              <ul className="grid sm:grid-cols-2 gap-4">
-                {integration.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-foreground text-sm">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeIn>
-
-          {/* How it works */}
-          <FadeIn delay={0.2}>
-            <h2 className="text-2xl font-heading font-semibold text-foreground mb-8">
-              How it works
-            </h2>
-            <div className="space-y-6 mb-12">
-              {integration.howItWorks.map((step, i) => (
-                <div key={i} className="flex gap-5 items-start">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-heading text-sm font-semibold">
-                    {i + 1}
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-foreground mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      {step.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          {/* CTA */}
-          <FadeIn delay={0.3}>
-            <div className="bg-primary rounded-2xl p-8 text-primary-foreground text-center">
-              <h3 className="text-2xl font-heading font-semibold mb-3">
-                Ready to connect {integration.name}?
-              </h3>
-              <p className="text-primary-foreground/80 mb-6 max-w-md mx-auto">
-                Sign up free and connect {integration.name} to your strategy
-                tree in minutes.
-              </p>
+      <section className="relative">
+        <BlobShape className="top-10 right-10 w-72 h-72" color="bg-leaf/10" />
+        <BlobShape className="bottom-20 left-10 w-80 h-80" color="bg-sand/8" />
+        <div className="container mx-auto px-6 py-10 md:py-14">
+          <div className="max-w-3xl mx-auto">
+            <FadeIn>
               <Link
-                to="/signup"
-                className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
+                to="/integrations"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-terracotta transition-colors mb-8"
               >
-                Sign Up Free
-                <ArrowRight className="h-4 w-4" />
+                <ArrowLeft className="h-4 w-4" />
+                All integrations
               </Link>
-            </div>
-          </FadeIn>
+
+              <div className="flex items-center gap-4 mb-6">
+                <div
+                  className={`w-14 h-14 rounded-xl ${integration.color} flex items-center justify-center`}
+                >
+                  <Puzzle className={`h-7 w-7 ${integration.textColor}`} />
+                </div>
+                <h1 className="text-3xl md:text-4xl font-heading font-semibold text-foreground">
+                  {integration.title}
+                </h1>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+                {integration.description}
+              </p>
+            </FadeIn>
+
+            {/* Features */}
+            <FadeIn delay={0.1}>
+              <div className="bg-card border border-border rounded-[1.5rem] p-8 mb-12">
+                <h2 className="text-2xl font-heading font-semibold text-foreground mb-6">
+                  What you get
+                </h2>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {integration.features.map((f, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-terracotta mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground text-sm">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* How it works */}
+            <FadeIn delay={0.2}>
+              <h2 className="text-2xl font-heading font-semibold text-foreground mb-8">
+                How it works
+              </h2>
+              <div className="space-y-6 mb-12">
+                {integration.howItWorks.map((step, i) => (
+                  <div key={i} className="flex gap-5 items-start">
+                    <div className="flex-shrink-0 w-9 h-9 rounded-full bg-terracotta text-white flex items-center justify-center font-heading text-sm font-semibold">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-foreground mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+            {/* CTA */}
+            <FadeIn delay={0.3}>
+              <div className="bg-card border border-border rounded-[1.5rem] p-8 text-center">
+                <h3 className="text-2xl font-heading font-semibold text-foreground mb-3">
+                  Ready to connect {integration.name}?
+                </h3>
+                <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                  Sign up free and connect {integration.name} to your strategy
+                  tree in minutes.
+                </p>
+                <Link
+                  to="/signup"
+                  className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
+                >
+                  Sign Up Free
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </div>

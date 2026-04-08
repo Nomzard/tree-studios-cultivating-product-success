@@ -1,7 +1,19 @@
 import FadeIn from "@/components/FadeIn";
 import SEO, { organizationSchema } from "@/components/SEO";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Clock, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+
+const BlobShape = ({
+  className = "",
+  color = "bg-sand/10",
+}: {
+  className?: string;
+  color?: string;
+}) => (
+  <div
+    className={`absolute rounded-[40%_60%_70%_30%/40%_50%_60%_50%] ${color} blur-3xl pointer-events-none ${className}`}
+  />
+);
 
 const guidesContent: Record<
   string,
@@ -153,7 +165,7 @@ const GuidePage = () => {
   if (!guide) return <Navigate to="/guides" replace />;
 
   return (
-    <div>
+    <div className="overflow-hidden bg-secondary">
       <SEO
         title={guide.title}
         description={guide.description}
@@ -169,71 +181,74 @@ const GuidePage = () => {
         }}
       />
 
-      <article className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-3xl mx-auto">
-          <FadeIn>
-            <Link
-              to="/guides"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              All guides
-            </Link>
+      <article className="relative">
+        <BlobShape className="top-10 right-10 w-72 h-72" color="bg-leaf/10" />
+        <div className="container mx-auto px-6 py-10 md:py-14">
+          <div className="max-w-3xl mx-auto">
+            <FadeIn>
+              <Link
+                to="/guides"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-terracotta transition-colors mb-8"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                All guides
+              </Link>
 
-            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
-              <span className="inline-flex items-center gap-1.5">
-                <Clock className="h-4 w-4" />
-                {guide.readTime}
-              </span>
-            </div>
-
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground leading-tight mb-6">
-              {guide.title}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12 pb-8 border-b border-border">
-              {guide.description}
-            </p>
-          </FadeIn>
-
-          <div className="space-y-12">
-            {guide.sections.map((section, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <section>
-                  <h2 className="text-2xl font-heading font-semibold text-foreground mb-4">
-                    {section.heading}
-                  </h2>
-                  {section.content.split("\n\n").map((paragraph, pi) => (
-                    <p
-                      key={pi}
-                      className="text-muted-foreground leading-relaxed mb-4"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
-                </section>
-              </FadeIn>
-            ))}
-          </div>
-
-          <FadeIn>
-            <div className="mt-16 pt-8 border-t border-border">
-              <div className="bg-primary rounded-2xl p-8 md:p-10 text-primary-foreground text-center">
-                <h3 className="text-2xl font-heading font-semibold mb-3">
-                  Ready to try it yourself?
-                </h3>
-                <p className="text-primary-foreground/80 mb-6 max-w-md mx-auto">
-                  Sign up free and start connecting strategy to impact today.
-                </p>
-                <Link
-                  to="/signup"
-                  className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
-                >
-                  Sign Up Free
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-4 w-4" />
+                  {guide.readTime}
+                </span>
               </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-semibold text-foreground leading-tight mb-6">
+                {guide.title}
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-12 pb-8 border-b border-border">
+                {guide.description}
+              </p>
+            </FadeIn>
+
+            <div className="space-y-12">
+              {guide.sections.map((section, i) => (
+                <FadeIn key={i} delay={i * 0.05}>
+                  <section>
+                    <h2 className="text-2xl font-heading font-semibold text-foreground mb-4">
+                      {section.heading}
+                    </h2>
+                    {section.content.split("\n\n").map((paragraph, pi) => (
+                      <p
+                        key={pi}
+                        className="text-muted-foreground leading-relaxed mb-4"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </section>
+                </FadeIn>
+              ))}
             </div>
-          </FadeIn>
+
+            <FadeIn>
+              <div className="mt-16 pt-8 border-t border-border">
+                <div className="bg-card border border-border rounded-[1.5rem] p-8 md:p-10 text-center">
+                  <h3 className="text-2xl font-heading font-semibold text-foreground mb-3">
+                    Ready to try it yourself?
+                  </h3>
+                  <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                    Sign up free and start connecting strategy to impact today.
+                  </p>
+                  <Link
+                    to="/signup"
+                    className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
+                  >
+                    Sign Up Free
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </article>
     </div>
