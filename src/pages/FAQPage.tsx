@@ -9,6 +9,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const BlobShape = ({
+  className = "",
+  color = "bg-sand/10",
+}: {
+  className?: string;
+  color?: string;
+}) => (
+  <div
+    className={`absolute rounded-[40%_60%_70%_30%/40%_50%_60%_50%] ${color} blur-3xl pointer-events-none ${className}`}
+  />
+);
+
 const faqs = [
   {
     category: "Product",
@@ -81,7 +93,7 @@ const allFaqItems = faqs.flatMap((c) => c.items);
 
 const FAQPage = () => {
   return (
-    <div>
+    <div className="overflow-hidden bg-secondary">
       <SEO
         title="FAQ – Frequently Asked Questions"
         description="Find answers to common questions about Tree Studios, our strategy tree product, integrations with Jira and Linear, pricing, security, and getting started."
@@ -89,53 +101,57 @@ const FAQPage = () => {
         jsonLd={[faqSchema(allFaqItems), organizationSchema]}
       />
 
-      <section className="container mx-auto px-6 py-20 md:py-28">
-        <FadeIn>
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
-              FAQ
-            </p>
-            <h1 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6">
-              Frequently asked questions
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Everything you need to know about Tree Studios, our product, and
-              how to get started.
-            </p>
-          </div>
-        </FadeIn>
+      <section className="relative">
+        <BlobShape className="top-10 left-10 w-72 h-72" color="bg-sand/10" />
+        <BlobShape className="bottom-20 right-10 w-80 h-80" color="bg-leaf/15" />
+        <div className="container mx-auto px-6 py-10 md:py-14">
+          <FadeIn>
+            <div className="max-w-2xl mx-auto text-center mb-16">
+              <p className="text-sm font-medium text-moss tracking-wide uppercase mb-4">
+                FAQ
+              </p>
+              <h1 className="text-4xl md:text-5xl font-heading font-semibold text-foreground mb-6">
+                Frequently asked questions
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Everything you need to know about Tree Studios, our product, and
+                how to get started.
+              </p>
+            </div>
+          </FadeIn>
 
-        <div className="max-w-3xl mx-auto">
-          {faqs.map((category, ci) => (
-            <FadeIn key={ci} delay={ci * 0.1}>
-              <div className="mb-12">
-                <h2 className="text-xl font-heading font-semibold text-foreground mb-4 pb-2 border-b border-border">
-                  {category.category}
-                </h2>
-                <Accordion type="single" collapsible className="space-y-2">
-                  {category.items.map((item, i) => (
-                    <AccordionItem
-                      key={i}
-                      value={`${ci}-${i}`}
-                      className="border border-border rounded-xl px-6 bg-card"
-                    >
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-5">
-                        {item.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
-                        {item.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </FadeIn>
-          ))}
+          <div className="max-w-3xl mx-auto">
+            {faqs.map((category, ci) => (
+              <FadeIn key={ci} delay={ci * 0.1}>
+                <div className="mb-12">
+                  <h2 className="text-xl font-heading font-semibold text-foreground mb-4 pb-2 border-b border-border">
+                    {category.category}
+                  </h2>
+                  <Accordion type="single" collapsible className="space-y-2">
+                    {category.items.map((item, i) => (
+                      <AccordionItem
+                        key={i}
+                        value={`${ci}-${i}`}
+                        className="border border-border rounded-[1.5rem] px-6 bg-card"
+                      >
+                        <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-5">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-card">
-        <div className="container mx-auto px-6 py-20">
+      <section className="relative">
+        <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl font-heading font-semibold text-foreground mb-4">
@@ -146,7 +162,7 @@ const FAQPage = () => {
               </p>
               <Link
                 to="/signup"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 bg-terracotta text-white px-7 py-3.5 rounded-full font-medium hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95"
               >
                 Sign Up Free
                 <ArrowRight className="h-4 w-4" />
