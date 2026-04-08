@@ -49,7 +49,7 @@ const Index = () => {
         <BlobShape className="bottom-1/4 left-1/4 w-56 h-56" color="bg-moss/10" />
 
         <div className="container mx-auto px-6 pt-28 pb-12 md:pt-40 md:pb-16 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
               <FadeIn variant="fadeUp" delay={0.1} duration={0.7}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-tight mb-6">
                   See how your
@@ -87,7 +87,7 @@ const Index = () => {
         <BlobShape className="top-0 right-0 w-96 h-96 -translate-y-1/3" color="bg-leaf/5" />
         <div className="container mx-auto px-6 py-10 md:py-14">
           <FadeIn variant="blur" duration={0.8}>
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
                 "Why are we prioritizing this?"
                 <br />
@@ -110,7 +110,7 @@ const Index = () => {
 
         <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="fadeDown">
-             <div className="max-w-2xl mx-auto text-center mb-16">
+             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
                 The pain is real
               </h2>
@@ -120,7 +120,7 @@ const Index = () => {
             </div>
           </FadeIn>
 
-          <div className="relative grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="relative grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
 
             {[
               {
@@ -165,7 +165,7 @@ const Index = () => {
       <section className="relative">
         <BlobShape className="top-1/2 right-0 w-80 h-80 translate-x-1/3" color="bg-accent/5" />
         <div className="container mx-auto px-6 py-10 md:py-14">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <FadeIn variant="scale" duration={0.7}>
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6 leading-snug">
                 The alignment layer
@@ -203,7 +203,7 @@ const Index = () => {
 
         <div className="container mx-auto px-6 py-10 md:py-14 relative z-10">
           <FadeIn variant="blur" duration={0.8}>
-            <div className="max-w-2xl mx-auto text-center mb-16">
+            <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-4">
                 What changes in the first week
               </h2>
